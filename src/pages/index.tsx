@@ -9,30 +9,100 @@ import { projects } from '@/lib/projects'
 
 const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
   const filteredProjects = projects.filter((project) => project.showOnHomepage)
+  const filteredProjectsHack = projects.filter(
+    (project) => project.showOnHomepageHack,
+  )
+  const personalProjects = projects.filter((project) => !project.hackathon)
+  const hackathonProjects = projects.filter((project) => project.hackathon)
+  const current = projects.filter((project) => project.current)
 
   return (
     <>
       {/* Bio */}
       <div className="mt-6">
-        <H1 className="mb-6">Hey, I&apos;m Mattia!</H1>
-        <Text>I&apos;m a nomad builder 🌍 🛠️.</Text>
-        <br />
+        <H1 className="mb-6">hey, i&apos;m kirsten!</H1>
         <Text>
-          I love to make software that helps people and I&apos;m currently
-          working on SaaS products while travelling around.
+          I spend most of my time leading the team behind{' '}
+          <a
+            href="https://www.talentlayer.org"
+            target="_blank"
+            className="underline"
+            rel="noreferrer"
+          >
+            TalentLayer
+          </a>
+          : a tool to solve fragmentation actoss marketplace applications via a
+          unified data and transaction layer.
         </Text>
         <br />
         <Text>
-          I haven&apos;t had a fixed home for the past few months, but you can
-          find me at most web3 hackathons around Europe.
+          I write shitty code, but I build great teams. I've been building
+          software startups since I was 16. I've tried a lot, failed a lot, and
+          learned a lot.
+        </Text>
+        <br />
+        <Text>
+          My most fundamental belief is that{' '}
+          <a className="font-bold">humans are autonomous</a>; that is, they are
+          able to take action to impact their environment and circumstances.
+          Anything can be done by anyone with enough willpower and grit. We make
+          our own reality.
+        </Text>
+        <br />
+        <Text>
+          Ask me about{' '}
+          <a
+            href="https://nakamotoinstitute.org/crypto-anarchist-manifesto/"
+            target="_blank"
+            className="underline"
+            rel="noreferrer"
+          >
+            Cryptoanarchy
+          </a>
+          .
+        </Text>
+        <br />
+        <Text>
+          <a
+            href="https://www.youtube.com/channel/UCgyT_7we6YGDVQJDKZD6EBA"
+            target="_blank"
+            className="underline"
+            rel="noreferrer"
+          >
+            You can listen to my lectures
+          </a>{' '}
+          on blockchain governance and ecosystem design, hosted by INATBA
+          (European Commission blockchain association), The IEEE, Fedex
+          Institute of Technology, Hyperledger Foundation and others.
+        </Text>
+        <br />
+
+        <Text>
+          Currently not based anywhere, but you can find me at the next
+          blockchain hackathon.
         </Text>
       </div>
 
       {/* Projects */}
       <div className="mt-12">
-        <H3 className="mb-3">Projects</H3>
+        <H3 className="mb-3">growth mode</H3>
         <Text className="mb-6">
-          These are some of the last projects that I&apos;ve been working on.
+          My biggest goal right now is getting TalentLayer to product market
+          fit.
+        </Text>
+        <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))] gap-4">
+          {current.map((project) => (
+            <ProjectCard key={project.title} project={project} />
+          ))}
+        </div>
+      </div>
+
+      {/* Projects */}
+      <div className="mt-12">
+        <H3 className="mb-3">prior startups</H3>
+        <Text className="mb-6">
+          I've been building software startups since I was 16. I've tried a lot,
+          failed a lot, and learned a lot.
         </Text>
         <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))] gap-4">
           {filteredProjects.map((project) => (
@@ -42,7 +112,29 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
         <div className="mt-6 flex justify-center">
           <Link href="/projects">
             <a className="text-primary text-center bg-base-200 rounded-lg px-4 py-2">
-              See all projects
+              see more
+            </a>
+          </Link>
+        </div>
+      </div>
+
+      {/* Projects */}
+      <div className="mt-12">
+        <H3 className="mb-3">hackathon projects</H3>
+        <Text className="mb-6">
+          I've been to 13 hackathons the past year and a half. Most of the time,
+          I'm there building proofs of concept on TalentLayer. I've won prizes
+          at the past 6 that I've hacked at.
+        </Text>
+        {/* <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))] gap-4">
+          {filteredProjectsHack.map((project) => (
+            <ProjectCard key={project.title} project={project} />
+          ))}
+        </div> */}
+        <div className="mt-6 flex justify-center">
+          <Link href="https://linktr.ee/kphacks" target="_blank">
+            <a className="text-primary text-center bg-base-200 rounded-lg px-4 py-2">
+              view the projects
             </a>
           </Link>
         </div>
@@ -50,10 +142,9 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
 
       {/* Posts */}
       <div className="mt-12">
-        <H3 className="mb-3">Last Posts</H3>
+        <H3 className="mb-3">latest writing</H3>
         <Text className="mb-6">
-          Some posts that I&apos;ve written about web development and my builder
-          journey.
+          I write occasionally about tech, startups, and the future of work.
         </Text>
         <div className="flex flex-col gap-8">
           {latestPosts.map((post) => (

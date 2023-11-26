@@ -7,25 +7,21 @@ const Footer = () => {
         <hr className="w-full border-1 border-base-200 mb-8" />
         <div className="flex gap-10">
           <a
-            href="https://github.com/kirstenpomales/"
+            href="https://linktr.ee/hellokp"
             target="_blank"
             rel="noopener noreferrer"
           >
-            github
+            linktree
           </a>
           <a
-            href="https://twitter.com/kirstenpomales"
+            href="https://open.spotify.com/playlist/0GurmcNMc6cV0bUh72dzZl"
             target="_blank"
             rel="noopener noreferrer"
           >
-            twitter
+            mixtape
           </a>
-          <a
-            href="https://www.linkedin.com/in/kirstenpomales/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            linkedin
+          <a href="/blog/my-art" rel="noopener noreferrer">
+            art
           </a>
         </div>
       </Container>

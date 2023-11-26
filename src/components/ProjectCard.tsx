@@ -6,7 +6,7 @@ import GithubIcon from '@/icons/github.svg'
 import { Project } from '@/lib/projects'
 
 const ProjectCard = ({ project }: { project: Project }) => {
-  const { title, description, tags, url, githubUrl } = project
+  const { title, description, tags, url, githubUrl, year, status } = project
   const { logo } = project
 
   const Logo =
@@ -32,6 +32,8 @@ const ProjectCard = ({ project }: { project: Project }) => {
       <main className="flex-grow mt-4">
         <H4 className="mb-3">{title}</H4>
         <TextSmall>{description}</TextSmall>
+        <br></br>
+        <TextSmall>{year}</TextSmall>
       </main>
       {/* <footer>
         <ul className="flex flex-wrap mt-7 gap-1">

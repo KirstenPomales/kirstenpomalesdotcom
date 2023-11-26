@@ -30,10 +30,9 @@ const BlogPage = ({ posts }: { posts: Post[] }) => {
           description,
         }}
       />
-      <H3 className="mt-6 mb-3">Blog</H3>
+      <H3 className="mt-6 mb-3">writing</H3>
       <Text className="mb-8">
-        Some posts that I&apos;ve written about web development and my builder
-        journey.
+        I write occasionally about tech, startups, and other things.
       </Text>
       {/* <div className="relative w-full mb-12">
         <input

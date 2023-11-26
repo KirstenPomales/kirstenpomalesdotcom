@@ -46,19 +46,6 @@ const Navbar = () => {
               blog
             </a>
           </Link>
-          <a
-            href="https://linktr.ee/hellokp"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={cx(
-              'font-medium',
-              router.pathname === '/posts'
-                ? 'underline'
-                : 'text-text-secondary',
-            )}
-          >
-            linktree
-          </a>
         </nav>
         <ThemeToggler />
       </Container>
