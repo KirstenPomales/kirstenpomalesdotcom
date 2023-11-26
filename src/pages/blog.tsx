@@ -9,7 +9,7 @@ import { getAllPosts } from '@/lib/posts'
 
 const url = 'https://kirstenpomales.com/blog'
 const title = 'Posts – Kirsten Pomales'
-const description = 'Recent writing about blockchain, startups, and more.'
+const description = 'My recent writing.'
 
 const BlogPage = ({ posts }: { posts: Post[] }) => {
   // const [search, setSearch] = useState('')
