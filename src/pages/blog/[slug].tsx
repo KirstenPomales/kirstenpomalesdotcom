@@ -16,7 +16,7 @@ const BlogPostPage = ({ post }: { post: Post }) => {
     // Don't register view if is not production
     if (
       process.env.NEXT_PUBLIC_ENV !== 'production' ||
-      window.location.hostname !== 'mattiapomelli.com'
+      window.location.hostname !== 'kirstenpomales.com'
     )
       return
 

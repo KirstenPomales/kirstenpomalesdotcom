@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://mattiapomelli.com',
+  siteUrl: 'https://kirstenpomales.com',
   generateRobotsTxt: true,
   generateIndexSitemap: false,
 }

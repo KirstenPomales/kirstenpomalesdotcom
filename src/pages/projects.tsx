@@ -7,8 +7,8 @@ import ProjectCard from '@/components/ProjectCard'
 import { H3, Text } from '@/components/Text'
 import { projects } from '@/lib/projects'
 
-const url = 'https://mattiapomelli.com/projects'
-const title = 'Projects – Mattia Pomelli'
+const url = 'https://kirstenpomales.com/projects'
+const title = 'Projects – Kirsten Pomales'
 const description = 'Projects I have worked on.'
 
 const ProjectsPage = () => {
@@ -29,8 +29,8 @@ const ProjectsPage = () => {
       />
       <H3 className="mt-6 mb-3">startups</H3>
       <Text className="mb-5">
-        I've been building software startups since I was 16. I've tried a lot,
-        failed a lot, and learned a lot.
+        I&apos;ve been building software startups since I was 16. I&apos;ve
+        tried a lot, failed a lot, and learned a lot.
       </Text>
 
       <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))] gap-4">
@@ -41,10 +41,10 @@ const ProjectsPage = () => {
 
       <H3 className="mt-6 mb-3">governance consulting and research</H3>
       <Text className="mb-5">
-        I've been leading research organizations and consulting on blockchian
-        governance since 2019. I entered the space after I left a political
-        career for tech, and discovered this unique niche where I had a unique
-        way to add value.
+        I&apos;ve been leading research organizations and consulting on
+        blockchian governance since 2019. I entered the space after I left a
+        political career for tech, and discovered this unique niche where I had
+        a unique way to add value.
       </Text>
 
       <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))] gap-4">
@@ -73,9 +73,9 @@ const ProjectsPage = () => {
       <div className="mt-12">
         <H3 className="mb-3">hackathon projects</H3>
         <Text className="mb-6">
-          I've been to 13 hackathons the past year and a half. Most of the time,
-          I'm there building proofs of concept on TalentLayer. I've won prizes
-          at the past 6 that I've hacked at.
+          I&apos;ve been to 13 hackathons the past year and a half. Most of the
+          time, I&apos;m there building proofs of concept on TalentLayer.
+          I&apos;ve won prizes at the past 6 that I&apos;ve hacked at.
         </Text>
         {/* <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))] gap-4">
           {filteredProjectsHack.map((project) => (

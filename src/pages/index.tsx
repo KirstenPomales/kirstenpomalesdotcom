@@ -36,9 +36,9 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
         </Text>
         <br />
         <Text>
-          I write shitty code, but I build great teams. I've been building
-          software startups since I was 16. I've tried a lot, failed a lot, and
-          learned a lot.
+          I write shitty code, but I build great teams. I&apos;ve been building
+          software startups since I was 16. I&apos;ve tried a lot, failed a lot,
+          and learned a lot.
         </Text>
         <br />
         <Text>
@@ -100,10 +100,6 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
       {/* Projects */}
       <div className="mt-12">
         <H3 className="mb-3">prior startups</H3>
-        <Text className="mb-6">
-          I've been building software startups since I was 16. I've tried a lot,
-          failed a lot, and learned a lot.
-        </Text>
         <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))] gap-4">
           {filteredProjects.map((project) => (
             <ProjectCard key={project.title} project={project} />
@@ -122,9 +118,9 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
       <div className="mt-12">
         <H3 className="mb-3">hackathon projects</H3>
         <Text className="mb-6">
-          I've been to 13 hackathons the past year and a half. Most of the time,
-          I'm there building proofs of concept on TalentLayer. I've won prizes
-          at the past 6 that I've hacked at.
+          I&apos;ve been to 13 hackathons the past year and a half. Most of the
+          time, I&apos;m there building proofs of concept on TalentLayer.
+          I&apos;ve won prizes at the past 6 that I&apos;ve hacked at.
         </Text>
         {/* <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))] gap-4">
           {filteredProjectsHack.map((project) => (

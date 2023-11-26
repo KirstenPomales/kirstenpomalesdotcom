@@ -20,9 +20,7 @@ const Footer = () => {
           >
             mixtape
           </a>
-          <a href="/blog/my-art" rel="noopener noreferrer">
-            art
-          </a>
+          <link href="/blog/my-art">art</link>
         </div>
       </Container>
     </footer>

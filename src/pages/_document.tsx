@@ -5,17 +5,23 @@ export default function Document() {
     <Html>
       <Head>
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@mattiapomelli" />
-        <meta name="twitter:title" content="Mattia Pomelli - Web Developer" />
+        <meta name="twitter:site" content="@kirstenrpomales" />
+        <meta
+          name="twitter:title"
+          content="Kirsten Pomales - startups, decentralization, sovereignty"
+        />
         <meta
           name="twitter:description"
-          content="Blockchain & Full Stack Web Developer."
+          content="startups, decentralization, sovereignty"
         />
         <meta
           name="twitter:image"
-          content="https://mattiapomelli.com/static/images/banner.png"
+          content="https://kirstenpomales.com/static/images/banner.png"
         />
-        <meta name="twitter:image:alt" content="Web Development" />
+        <meta
+          name="twitter:image:alt"
+          content="startups, decentralization, sovereignty"
+        />
         <link
           rel="preload"
           href="/fonts/nunito-sans-v6-latin-regular.woff2"

@@ -3,7 +3,7 @@ import { NextSeo } from 'next-seo'
 
 import { H1, Text } from '@/components/Text'
 
-const title = '404 – Mattia Pomelli'
+const title = '404'
 
 export default function NotFound() {
   return (
@@ -19,7 +19,7 @@ export default function NotFound() {
         <Text className="mb-6">Are you lost? 👀</Text>
         <Link href="/">
           <a className="py-3 px-6 mb-6 text-center bg-secondary rounded-md text-primary font-bold">
-            Go to home
+            go home
           </a>
         </Link>
       </div>

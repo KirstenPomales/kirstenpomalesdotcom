@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://mattiapomelli.com
+Host: https://kirstenpomales.com
 
 # Sitemaps
-Sitemap: https://mattiapomelli.com/sitemap.xml
+Sitemap: https://kirstenpomales.com/sitemap.xml
