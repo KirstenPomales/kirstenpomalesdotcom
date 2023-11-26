@@ -40,21 +40,21 @@
 
 /* Theme */
 :root {
-  --primary: #086DFF;
+  --primary: #0ca098;
   --secondary: #EDF2F7;
   --text-primary: #343A40;
   --text-secondary: #727272;
-  --base-100: #FFFFFF;
-  --base-200: #eaebed;
+  --base-100: #d7faea;
+  --base-200: #b3f2d4;
 }
 
 :root.dark {
-  --primary: #72CAF3;
+  --primary: #14cbc2;
   --secondary: #151F28;
   --text-primary: #FFFFFF;
   --text-secondary: #888888;
-  --base-100: #111111;
-  --base-200: #333333;
+  --base-100: #052826;
+  --base-200: #0d524f;
 }
 
 html,

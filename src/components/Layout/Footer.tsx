@@ -7,20 +7,26 @@ const Footer = () => {
         <hr className="w-full border-1 border-base-200 mb-8" />
         <div className="flex gap-10">
           <a
-            href="https://github.com/mattiapomelli/"
+            href="https://github.com/kirstenpomales/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Github
+            github
           </a>
           <a
-            href="https://twitter.com/mattiapomelli"
+            href="https://twitter.com/kirstenpomales"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Twitter
+            twitter
           </a>
-          <a href="mailto:mattiapomelli@gmail.com">Email</a>
+          <a
+            href="https://www.linkedin.com/in/kirstenpomales/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            linkedin
+          </a>
         </div>
       </Container>
     </footer>
