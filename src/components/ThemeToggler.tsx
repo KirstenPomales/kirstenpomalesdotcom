@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
 
-import MoonIcon from '@/icons/moon.svg'
-import SunIcon from '@/icons/sun.svg'
+import MoonIcon from '@/icons/clover.svg'
+import SunIcon from '@/icons/raccoon.svg'
 
 const ThemeToggler = () => {
   const [mounted, setMounted] = useState(false)

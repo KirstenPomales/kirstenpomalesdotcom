@@ -1,6 +1,6 @@
-const title = 'Mattia Pomelli'
-const description = 'Nomad Builder'
-const url = 'https://mattiapomelli.com'
+const title = 'Kirsten Pomales'
+const description = 'never stop working on something bigger'
+const url = 'https://kirstenpomales.com'
 const image = `${url}/static/images/banner.png`
 
 const SEO = {
@@ -16,7 +16,7 @@ const SEO = {
     images: [
       {
         url: image,
-        alt: 'Mattia Pomelli',
+        alt: 'Kirsten Pomales',
         type: 'image/png',
       },
     ],

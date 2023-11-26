@@ -47,7 +47,7 @@ const Navbar = () => {
             </a>
           </Link>
           <a
-            href="https://mattiapomelli.substack.com/"
+            href="https://linktr.ee/hellokp"
             target="_blank"
             rel="noopener noreferrer"
             className={cx(
@@ -57,7 +57,7 @@ const Navbar = () => {
                 : 'text-text-secondary',
             )}
           >
-            newsletter
+            linktree
           </a>
         </nav>
         <ThemeToggler />
