@@ -6,7 +6,7 @@ import GithubIcon from '@/icons/github.svg'
 import { Project } from '@/lib/projects'
 
 const ProjectCard = ({ project }: { project: Project }) => {
-  const { title, description, tags, url, githubUrl, year, status } = project
+  const { title, description, tags, url, githubUrl, year } = project
   const { logo } = project
 
   const Logo =
