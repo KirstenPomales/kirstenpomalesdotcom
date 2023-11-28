@@ -6,7 +6,7 @@ export default function Document() {
       <Head>
         <meta
           name="google-site-verification"
-          content="zoSmqkEUI5Nf8D0YkDPGH4h03sXquvuX4W_fNJNdvOc"
+          content="MAJPawqNlnYmdLM95eERenip4W__AxwbUJJzkXKPANs"
         />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@kirstenrpomales" />
