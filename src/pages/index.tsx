@@ -36,9 +36,9 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
         <br />
         <Text>
           I write shitty code, but I build great teams. I&apos;ve been{' '}
-          <a className="underline">
-            <Link href="/projects">building software startups</Link>{' '}
-          </a>
+          <Link href="/projects">
+            <a className="underline">building software startups</a>
+          </Link>{' '}
           since I was 16. I&apos;ve tried a lot, failed a lot, and learned a
           lot.
         </Text>
@@ -57,6 +57,12 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
           (European Commission blockchain association), The IEEE, Fedex
           Institute of Technology, Hyperledger Foundation and others.
         </Text>
+        {/* <br />
+        <Text>
+          Self-taught fullstack developer. Dropout from a school you&apos;ve
+          never heard of.
+        </Text> */}
+
         <br />
         <Text>
           My most fundamental belief is that{' '}

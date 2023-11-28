@@ -1,0 +1,193 @@
+---
+title: bootstrapping talentLayer together 
+date: 2023-09-06
+excerpt: We wanted to share with you more on our biggest goal that we are working on. Bootstrapping TalentLayer...
+---
+  
+GM, TalentLayer open-source community 🍀
+
+We wanted to share with you more on our biggest goal that we are working on: bootstrapping TalentLayer. We’re a sorta big team now — lots of new and old contributors — and we’re working on a lot of things at once. That’s awesome, but also means sometimes it can be hard to see the big picture and how all our work fits together as puzzle pieces.
+
+How do we make sure we’re all on the same page? To start, we made this guide! 😄
+
+This is intended to be a spark for discussion. I’ve made this doc open for comments (or at least I tried to — lmk if you can comment haha). Please feel free to mark it up with ideas or questions.
+
+Thank you for being a part of our community. We’re proud to build alongside you, and excited to reach our next stage of growth, together!
+
+❤️ TalentLayer Core Team
+
+The Goal: Bootstrap TalentLayer
+Our goal at TalentLayer is to become the underlying infrastructure for all the service platforms of the world. In doing so, we’ll enable all workers to own their reputation and access a pool of jobs with complete sovereignty.
+
+That’s a big vision — easy to say, hard to do. How do we get there?
+
+We need to bootstrap the network! There can’t be any value created through connecting workers and work if there aren’t enough work or workers at the protocol level.
+
+TalentLayer is a “market network” — that means a network of marketplaces/interfaces, with an underlying unified layer for reputation and transactions.
+
+<Image
+  alt={`Image`}
+  src={`/static/images/tl-diagram.webp`}
+  width={1000}
+  height={450}
+/>
+
+platforms can be anything from self-hosted interfaces to major software marketpalce businesses
+
+The larger our pool of hirers and workers — our “network effect” — grows, the larger the marketplace that will be interested in tapping into that network. Read more about network effects.
+
+It’s valuable for a platform to integrate if the network effect of TalentLayer is of substantial size to help fill positions that remain unfilled or place workers that remain unplaced on their platform. For brand new platforms, it’s immediately valuable to integrate. For major existing platforms, it’s valuable to integrate only if the network effect of TalentLayer is of meaningful size.
+
+<Image
+  alt={`Image`}
+  src={`/static/images/growth.webp`}
+  width={1000}
+  height={650}
+/>
+
+Now that you know a bit about the high-level stuff, how do you even go about scaling such a network? Next let’s look at the three key demographics needed in our ecosystem to scale TalentLayer.
+
+TalentLayer as a Three-Sided Market Network
+Since TalentLayer is a market network, despite us serving two-sided hiring platforms, we ourselves are actually a three-sided market. Want to learn more about market networks? Read this.
+
+The three demographics in our market network are 👷 Workers, 🎩 Hirers, and ⚒️ Builders.
+
+The most important value exchange in the market network happens between workers and hirers. Builders build tools that facilitate value exchange between workers and hirers.
+
+🍀 Note on Recruiters: Technically, there is a fourth demographic in the ecosystem — recruiters. They are not themselves workers, hirers, or builders, but they help in facilitating connections between the three other demographics. This we’ll explore in another memo (stay tuned for after we release our referrals system late 2023).
+
+Let’s learn about each demographic.
+
+
+👷 Workers
+Who they are: Salary workers, gig workers, part-time workers
+
+What they do: They do work for someone else in exchange for money
+
+Examples:
+
+A student makes money delivering pizza
+A business man earns a salary working for a tech company
+A freelance developer works for clients
+An Uber driver earns by driving people around
+
+🎩 Hirers
+Who they are: HR managers, business owners, everyday consumers
+
+What they do: They pay someone money to do something for them
+
+Examples:
+
+A mom in Warsaw buys grocery delivery services on Glovo food delivery app
+A HR manager in the UK hires a software developer
+A branding agency hires an influencer for influencer marketing
+A college student hires a tutor
+A businessman orders an Uber ride
+
+🛠️ Builders
+Who they are: Entrepreneurs and the developers that work with them
+
+What they do: They build tools that facilitate hirer and worker relationships.
+
+Examples:
+
+Developer working for a mainstream web 2 marketplace
+Entrepreneur building crypto bounties platform
+Entrepreneur building cross-border payroll solution
+Developer building web 3 freelance marketplace
+Entry Market
+TalentLayer as it stands today can be used for literally any two-sided service relationship.
+
+gig marketplaces
+ride sharing apps
+house sharing apps
+photography marketplaces
+telemedicine apps
+ai task marketplaces
+payroll platforms
+etc.
+This means the sky is the limit — but if we want to bootstrap network effects, we need to be strategic and choose the right entry market. Why?
+
+Because TalentLayer’s main value is providing liquidity sharing amongst marketplaces, in order to succeed in this we need to have marketplaces with similar target demographics in the network.
+
+Criteria for a Good Entry Market
+We could target any two-sided service relationship as an entry market, but for now it makes sense to choose something that meets the following criteria:
+
+🌐 Location Independent:
+By choosing an industry that isn’t tied to geo-location, we make the network easier to grow.
+
+🚗 Uber = Location dependent: If you have 100 drivers and 100 riders sign up but they are all in different cities around the world, you can’t provide any value.
+
+💻 Developer marketplace = Location independent: If you have 100 devs and 100 dev hirers sign up but they are all in different cities around the world, you CAN match and get people hired.
+
+💵 High Margin:
+By having a high-margin focus industry, platform builders are able to make more profits (drawing in more builders)
+
+💻 Tech Savvy:
+We want the hirers and workers to optimally be tech savvy — our product isn’t mature yet and has a tech barrier to entry.
+
+📈 Crypto Savvy:
+Account abstraction tech (in general in the crypto industry) isn’t mature enough to allow full web2 user experience yet. For this reason, we need to have users be at lease a little bit crypto savvy. In the meantime, we’ll build account abstraction tech to the extend the industry allows. We think web2 UX is coming in 6 mos to 1 year based on current industry trends. Then we will be able to start mass onboarding average users.
+
+Our Entry Market: Developers
+With all this said, what’s the best entry market?
+
+Software developers who have some experience or interest in web 3.
+
+Luckily, we all are software developers, have used software dev hiring platforms, and know the feeling and issues with getting AND hiring for dev jobs. What a pleasure to serve ourselves as an entry market, haha!
+
+Most of the platforms building on TalentLayer today are developer or tech industry focused.
+
+😜 Behind the scenes: Did we always intentionally target developers as an entry market? Nope! In fact, this sort of happened on it’s own because without our prompting many of the first marketplaces building on TalentLayer just happened to be developer focused. This is because in general developer marketplaces are very popular businesses compared to other marketplaces because developers are in very high demand.
+
+So, if we’re targeting developers as our entry market, that means our three demographics are actually a subset — people serving or who are devs!
+
+👷 Workers
+Workers who are software developers
+
+🎩 Hirers
+Hirers who look for software developers
+
+🛠️ Builders
+Builders of dev platforms and matching services
+
+TalentLayer Community’s Role in Bootstrapping The Network:
+Ok that was a lot of high-level stuff. How are we going to do the stuff? We have strategies to target each of the key demographics we have. Be fore that, though, a word on TalentLayer’s role…
+
+The TalentLayer protocol developers (core team, open-source team, founders) in general DON’T want to host platforms. It’s not our job — we develop and maintain the protocol, and we aren’t in the business of running hiring platforms and/or competing with the platforms building on top of us.
+
+If we don’t want to host platforms, how do we bootstrap the network? If we don’t build any interfaces, then we can’t funnel in workers and hirers directly into the protocol — this in turn makes the network effect entirely reliant on third party platforms integrating. This causes a chicken and egg problem, because without the network effect already there, only brand new platforms will have an interest in integrating (and brand new platforms don’t have many users themselves)! We’ve realized this over the past 5 months since mainnet launch.
+
+We need to be pragmatic about how to bootstrap the network, even if it’s our goal to avoid hosting platforms. For this reason, we’re committing to building interfaces that we intend to host for as short a period as we can — we don’t aim to run them as businesses and will either sunset them after a period or hand them off to another team to run. Rather, our intent is to have them get enough usage to get enough workers/hirers on the network to bring bigger platform builders on the network. In other words, until we reach “medium network effect” as described in the graphic in section one.
+
+🎩 Hirers — Embeddable Hiring Board
+Codename: BuilderWorld or MyGigBoard
+
+Demand: We’ve been asked repeatedly for someone to build a “Pallet on TalentLayer” — where teams can host their own job boards on their own website, but still get posts circulated to a wider hiring network. Teams don’t like Pallet because it doesn’t have internal payments, only offers full-time work coverage, and sells all data of users.
+
+Solution: An embeddable i-frame hiring board for companies, connected with TalentLayer to distribute opportunities across other platforms — giving opportunities more views.
+
+Status: We have UX/UI in progress on this (Sohey) and will start implementation soon (Pranav). We have market research happening as well (Mitko) with the teams interested in the offering.
+
+👷 Workers — Worker Reputation Platform
+Codename: Trustky
+
+Problem: We have 12K crypto-native workers in the network already, but there’s very little data out there about them. Therefore, hirers can’t know if they pose a good talent pool. We also need more talent to enter the network.
+
+Solution: Incentivize workers to create holistic profiles by associating third-party accounts, filling out more sections, etc.
+
+Status: We built Trustky, a resume builder and web 3 worker-focused marketplace, at ETH Paris this year. We’re doing some UX/UI work (Romain, Kirsten) to refactor it into such a worker reputation platform, and expand features (Yash). Then, we’ll roll-out incentives to get a TLID and add more profile deets!
+
+🛠 Builders — TalentLayer SDK and Frontend Library
+Codename: TalentLayer SDK
+
+Problem: Right now the main way teams are integrating TalentLayer is by taking the example codebase, reading through it, and figuring how to implement — or by forking the example codebase. This is inefficient and not suitable for scalable adoption.
+
+Solution: A nice clean SDK and frontend library to enable fast and flexible integration.
+
+Status: The architecture just got approved and development has started. V1.1 delivery estimated for ETH Rome (Pranav).
+
+That’s all for now!
+Thanks for reading, friends. Looking forward to your comments.
+
+Let’s roll.
