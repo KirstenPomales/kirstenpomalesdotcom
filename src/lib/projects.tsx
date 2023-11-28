@@ -20,7 +20,7 @@ export const projects: Project[] = [
   {
     title: 'TalentLayer, Executive Lead',
     description:
-      'a shared data and transaction layer unifying marketplace applications, designed to solve the chicken and egg problem. grew it from 0 to a 20+ person open-source movement, generated revenue, 11K users, etc.',
+      'an API layer connecting the worlds marketplaces. 3 platforms integrated, 12K users, 11K revenue, etc.',
     year: '🟢 July 2022 - Present',
     tags: [],
     url: 'https://www.talentlayer.org/',

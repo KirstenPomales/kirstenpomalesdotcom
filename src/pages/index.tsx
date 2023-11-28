@@ -31,14 +31,31 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
           >
             TalentLayer
           </a>
-          : a tool to solve fragmentation actoss marketplace applications via a
-          unified data and transaction layer.
+          : an API layer connecting the world&apos;s marketplaces.
         </Text>
         <br />
         <Text>
-          I write shitty code, but I build great teams. I&apos;ve been building
-          software startups since I was 16. I&apos;ve tried a lot, failed a lot,
-          and learned a lot.
+          I write shitty code, but I build great teams. I&apos;ve been{' '}
+          <a className="underline">
+            <Link href="/projects">building software startups</Link>{' '}
+          </a>
+          since I was 16. I&apos;ve tried a lot, failed a lot, and learned a
+          lot.
+        </Text>
+        <br />
+        <Text>
+          I ran an IEEE working group on Blockchain Governance for 2 years.{' '}
+          <a
+            href="https://www.youtube.com/channel/UCgyT_7we6YGDVQJDKZD6EBA"
+            target="_blank"
+            className="underline"
+            rel="noreferrer"
+          >
+            You can listen to my lectures
+          </a>{' '}
+          on blockchain governance and ecosystem design, hosted by INATBA
+          (European Commission blockchain association), The IEEE, Fedex
+          Institute of Technology, Hyperledger Foundation and others.
         </Text>
         <br />
         <Text>
@@ -62,20 +79,6 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
           .
         </Text>
         <br />
-        <Text>
-          <a
-            href="https://www.youtube.com/channel/UCgyT_7we6YGDVQJDKZD6EBA"
-            target="_blank"
-            className="underline"
-            rel="noreferrer"
-          >
-            You can listen to my lectures
-          </a>{' '}
-          on blockchain governance and ecosystem design, hosted by INATBA
-          (European Commission blockchain association), The IEEE, Fedex
-          Institute of Technology, Hyperledger Foundation and others.
-        </Text>
-        <br />
 
         <Text>
           Currently not based anywhere, but you can find me at the next
@@ -87,8 +90,7 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
       <div className="mt-12">
         <H3 className="mb-3">growth mode</H3>
         <Text className="mb-6">
-          My biggest goal right now is getting TalentLayer to product market
-          fit.
+          My biggest goal right now is making TalentLayer grow.
         </Text>
         <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))] gap-4">
           {current.map((project) => (
@@ -128,11 +130,11 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
           ))}
         </div> */}
         <div className="mt-6 flex justify-center">
-          <Link href="https://linktr.ee/kphacks" target="_blank">
+          <a href="https://linktr.ee/kphacks" target="_blank" rel="noreferrer">
             <a className="text-primary text-center bg-base-200 rounded-lg px-4 py-2">
               view the projects
             </a>
-          </Link>
+          </a>
         </div>
       </div>
 
@@ -146,6 +148,13 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
           {latestPosts.map((post) => (
             <BlogPostPreview key={post.slug} post={post} />
           ))}
+        </div>
+        <div className="mt-6 flex justify-center">
+          <Link href="/blog" target="_blank">
+            <a className="text-primary text-center bg-base-200 rounded-lg px-4 py-2">
+              read more
+            </a>
+          </Link>
         </div>
       </div>
     </>
