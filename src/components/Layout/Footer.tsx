@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import Container from './Container'
 
 const Footer = () => {
@@ -20,7 +22,7 @@ const Footer = () => {
           >
             mixtape
           </a>
-          <link href="/blog/my-art">art</link>
+          <Link href="/blog/my-art">art</Link>
         </div>
       </Container>
     </footer>
