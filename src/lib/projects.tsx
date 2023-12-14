@@ -80,6 +80,17 @@ export const projects: Project[] = [
     showOnHomepageHack: true,
   },
   {
+    title: 'PeopleHat, Founder',
+    description:
+      'a monthly subsctiption for virtual assistants (indie hack, for extra income). initially tried to serve software entreprenurs, but had more traction with real estate agents. i ended up closing it to focus more on my main startup at the time (Pollr).',
+    tags: [],
+    year: '🔴 June 2020 - August 2020',
+    url: 'https://www.indiehackers.com/post/its-happening-first-free-trial-14-products-in-14-days-update-8-f85f0daa56',
+    logo: '/peoplehat.png',
+    hackathon: true,
+    showOnHomepageHack: false,
+  },
+  {
     title: 'F4F Learn, COO',
     year: '🔴 June 2015 - Jan 2016',
     description:
