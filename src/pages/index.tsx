@@ -44,7 +44,8 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
         </Text>
         <br />
         <Text>
-          I ran an IEEE working group on Blockchain Governance for 2 years.{' '}
+          I ran an IEEE research group on Blockchain Governance from 2019 to
+          2021.{' '}
           <a
             href="https://www.youtube.com/channel/UCgyT_7we6YGDVQJDKZD6EBA"
             target="_blank"
@@ -69,8 +70,10 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
           <a className="font-bold">humans are autonomous</a>; that is, they are
           able to take action to impact their environment and circumstances.
           Anything can be done by anyone with enough willpower and grit. We make
-          our own reality.
+          our own reality. When we realize this, we are free.
         </Text>
+        <br />
+        <Text>Dropout and self-taught dev.</Text>
         <br />
         <Text>
           Ask me about{' '}
