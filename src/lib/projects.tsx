@@ -50,7 +50,7 @@ export const projects: Project[] = [
   {
     title: 'Facings, COO',
     description:
-      'a white-label NFT marketplace solution for influencers, sports collectables, clothing companies, and more. grew it from 5 to 12 people, generated revenue, raised pre-seed round.',
+      'a white-label NFT marketplace solution for influencers, sports collectables, clothing companies, and more. grew it from 5 to 12 people, generated revenue, raised pre-seed round. still running today',
     tags: [],
     year: '🟢 June 2021 - July 2022',
     url: 'https://facings.io/',
@@ -60,7 +60,7 @@ export const projects: Project[] = [
   {
     title: 'SponPay, COO',
     description:
-      'an micro-influencer marketing marketplace. had 40 or so users and some transactions, but we had trouble scaling past small volume.',
+      'an micro-influencer marketing marketplace. had 40 or so users and some transactions, but we had trouble scaling past small volume. today there are dozens of similar platforms succeeding big - we were too early.',
     tags: [],
     year: '🔴 Nov 2018 - April 2019',
     url: 'https://www.crunchbase.com/organization/sponpay',
@@ -71,7 +71,7 @@ export const projects: Project[] = [
   {
     title: 'Pollr, Business Development Officer',
     description:
-      'an alternative political data aggregator designed to give lobbying organizations more accurate data to advocate their positions with. the problem we tried to solve ended up not being painful enough for organizations to spend money on.',
+      'an alternative political data aggregator designed to give lobbying organizations more accurate data to advocate their positions with. the problem we tried to solve ended up being very misguided - turns out political organizations don not want more accurate data, they want data that supports their side of the story.',
     tags: [],
     year: '🔴 Jan 2019 - Nov 2020',
     url: 'https://www.crunchbase.com/organization/pollr-io',
@@ -83,7 +83,7 @@ export const projects: Project[] = [
     title: 'F4F Learn, COO',
     year: '🔴 June 2015 - Jan 2016',
     description:
-      'an online course platform designed for high-school age public speaking curriculum. had dozens of student teachers posting video courses from around the US and Canada, and 100s of viewers.',
+      'an online course platform designed for high-school age public speaking curriculum. had dozens of student teachers posting video courses from around the US and Canada and 100s of viewers (but no business model)!',
     tags: ['Next.js', 'Lens Protocol', 'Railgun', 'Sismo'],
     url: 'https://www.facebook.com/fightforforensics',
     logo: '/f4f.png',
