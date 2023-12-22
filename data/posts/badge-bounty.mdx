@@ -1,0 +1,133 @@
+---
+title: talentlayer success story: how one open-source contributor saved TheBadge’s launch day
+date: 2023-12-21
+excerpt: This month, something incredible happened. The newest platform to launch on TalentLayer, #BuilderPlace, ended up helping a startup solve an emergency bug that was preventing their mainnet launch! It all started at 8:34 AM on Friday,...
+---
+  
+# How One Open-Source Contributor Saved TheBadge’s Launch Day
+
+##### A BuilderPlace Case Study
+
+# The emergency
+
+It was 8:34 AM CET on Friday, December 1st when I got a message from  [Agu](https://twitter.com/Agupane), my friend and COO of  [TheBadge](https://www.thebadge.xyz/)  — a decentralized certification protocol.
+
+They were 3 days away from launching “blockchain certifications as a service” to mainnet when they came across a 🪲  **bug that was preventing their subgraph from deploying on Polygon**.
+
+🤯  **This was a big issue**. One of their clients needed their certifications as a service to issue credentials on Monday, December 4th!
+
+They reached out to The Graph team for help. Their developers diligently checked the issue, but didn’t have immediate solutions.  [The Graph team created an ticket on Github](https://github.com/graphprotocol/graph-node/issues/5035), to ask the community for help.
+
+TheBadge’s team had been working all night to figure out the issue, but couldn’t solve it. So, they asked our help to launch an 🚨  **emergency bug bounty**  🚨 on  [BuilderPlace](https://builder.place/)  — an open-source bounty management platform that just launched on  [TalentLayer](https://docs.talentlayer.org/).
+
+![](https://miro.medium.com/v2/resize:fit:1400/1*D__-0tvavXMAgRL22dz-eQ.png)
+
+DMs between Kirsten from TalentLayer and Agu with TheBadge
+
+# The bounty
+
+TheBadge team is participating in BuilderPlace Alpha cohort. This bug turned out to be the most important first bounty to post on their community portal  [**thebadge.builder.place**](http://thebadge.builder.place/)**.**
+
+![](https://miro.medium.com/v2/resize:fit:1400/1*DQhQPV4EApGyjj67cgADOw.png)
+
+TheBadge’s BuilderPlace bounty board
+
+By 11:00 AM CET, the bounty post went live on BuilderPlace.
+
+The bounty post automatically got distributed to other hiring platforms like  [WorkX](https://workx.io/); that’s because BuilderPlace is integrated with  [TalentLayer; an API that connects marketplaces](https://docs.talentlayer.org/).
+
+We posted the bounty in a bunch of smart contract auditor Telegram groups and Discords — and, of course, Twitter!
+
+These channels resulted in 8 open-source auditors joining  [TheBadge’s Discord](https://discord.com/invite/FTxtkgbAC4)  in the following few hours. @Codingsh was one of them! He found the emergency bug via Kirsten’s Twitter post.
+
+TheBadge’s team explained the issue in detail on their Discord #bounty-hunters channel and in  [this Notion guide](https://www.notion.so/Emergency-Bug-Bounty-9f51733fe88540ccb5b6fbe4f7cdcc93?pvs=21).
+
+![](https://miro.medium.com/v2/resize:fit:1400/1*JJvvnAdXUUvm1d10eH7EAg.png)
+
+The description of the issue on TheBadge’s Discord
+
+People started to review the code and come up with possible explanations for the issue. 🤔
+
+![](https://miro.medium.com/v2/resize:fit:1400/1*WDdfe70fCUqSz-oSRh5E6A.png)
+
+Some possible explanations (that didn’t solve the issue)
+
+Different ideas were discussed and tested, but none solved the issue.
+
+By the end of the day Sunday, there was still no resolution to be found. TheBadge team was figuring out backup plans.
+
+# The solution
+
+On Monday, December 4th — the day the mainnet launch was schedule for, and the day that TheBadge’s first client needed to use their certifications — a message came into the Discord at 5:09 AM CET.
+
+![](https://miro.medium.com/v2/resize:fit:1400/1*ZgMA6BW0FAtjQuVkIPC0iw.png)
+
+The post from CodingSH proposing a solution (that worked!)
+
+@Codingsh proposed a solution. Agu ended up checking it, and it indeed resolved the deployment issue!
+
+TheBadge was able to deploy their subgraph on Polygon — just in time.
+
+# What was the issue?
+
+It turned out in the end that there was not an issue with TheBadge’s code itself — after all, they were able to deploy their contracts and subgraphs successfully to multiple other chains, just couldn’t deploy to Polygon.
+
+The version of TheGraph CLI that TheBadge was using to deploy had a bug relating to the RPC provider it used on Polygon. Updating the CLI solved the problem.
+
+Sometimes the most simple bugs cause the most issues — oftentimes they’re hard to diagnose; especially when hidden behind multiple layers of dependencies like this one.
+
+[In this thread](https://twitter.com/codingsh/status/1738008073493766617), Codingsh gave an overview of how he approached the issue.
+
+![](https://miro.medium.com/v2/resize:fit:1400/1*iQ_9k8SPvQ3_VB8sH1Ke9A.png)
+
+TheBadge’s team reported back to The Graph team that they’d solved the issue! The case of the mystery failed subgraph deployment was solved.
+
+![](https://miro.medium.com/v2/resize:fit:1400/1*ubULhlRNocz0kFw9LMfXVw.png)
+
+Agu reporting back to The Graph that the issue was solved
+
+Thanks to @Codingsh TheBadge was able to launch on mainnet on-time.
+
+TheBadge’s team was incredible grateful for his help, and awarded him the bounty of 500 USDC through BuilderPlace.
+
+![](https://miro.medium.com/v2/resize:fit:1400/1*vnNA-P6i0_64TOZzIs45Og.png)
+
+Announcing the winner of the bounty!
+
+# The power of open-source
+
+By simply sharing the things we need help with in public, and sharing the mission behind what you are doing, we can achieve so much more than we could alone.
+
+Whether we’re talking about solving pressing emergency bugs or even just building new features for your ecosystem — there are people our there that want to help you today.
+
+The reason I’m so excited about the launch of BuilderPlace is because it gives every team the power to engage open-source contributors towards their project’s goals.
+
+I’ve seen it first-hand at TalentLayer — we wouldn’t be where we are today without contributions of 25+ open-source developers, marketers, and researchers.
+
+We were so happy to see TheBadge have so much success with their first ever open-source contribution! They’ve already posted two more since then.
+
+Are you an open-source developer looking to have an impact?
+
+Are you an open-source project looking to expand?
+
+Check out  [BuilderPlace](https://builder.place/)  today. It may be just the tool you’ve been looking for.
+
+# Learn more
+
+## **TheBadge**
+
+TheBadge is a decentralized certification platform powered by blockchain. It provides users the opportunity to tokenize information from the real world in the form of certifications (badges). These badges are verified and validated by the community, which decides what should be accepted and what not.
+
+[Twitter](https://twitter.com/thebadgexyz)  |  [Website](https://www.thebadge.xyz/)  |  [Discord](https://discord.com/invite/FTxtkgbAC4)  |  [TheBadge.Builder.Place](https://thebadge.builder.place/)
+
+## **BuilderPlace**
+
+BuilderPlace is an open-source community management platform and contributor discovery engine. It let’s teams create, customize, and manage their own open-source bounty board.
+
+[Twitter](https://twitter.com/builderplace)  |  [Website](https://builder.place/)  |  [Build.Builder.Place](https://build.builder.place/)
+
+## **TalentLayer**
+
+TalentLayer is the API connecting the world’s marketplaces. TalentLayer helps marketplace applications like freelance marketplaces and ride-share apps access additional supply or demand when they need it by tapping into a wider network of users. TalentLayer’s Web 3 API and SDK is live and available for integration.
+
+[Twitter](https://twitter.com/TalentLayer)  |  [Website](https://talentlayer.org/)  |  [Documentation](https://docs.talentlayer.org/)  |  [TalentLayer.Builder.Place](https://talentlayer.builder.place/)
