@@ -50,7 +50,7 @@ export const projects: Project[] = [
   {
     title: 'Facings, COO',
     description:
-      'a white-label NFT marketplace solution for influencers, sports collectables, clothing companies, and more. grew it from 5 to 12 people, generated revenue, raised pre-seed round. still running today',
+      'a white-label NFT marketplace solution for influencers, sports collectables, clothing companies, and more. grew it from 5 to 12 people, generated revenue, raised pre-seed round. its still running today w/o me.',
     tags: [],
     year: '🟢 June 2021 - July 2022',
     url: 'https://facings.io/',
