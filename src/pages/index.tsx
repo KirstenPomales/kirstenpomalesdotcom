@@ -31,7 +31,8 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
           >
             TalentLayer
           </a>
-          : an API layer connecting the world&apos;s marketplaces.
+          : TalentLayer is a protocol network for storing and accessing verified
+          work history and reviews.
         </Text>
         <br />
         <Text>

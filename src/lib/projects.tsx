@@ -20,7 +20,7 @@ export const projects: Project[] = [
   {
     title: 'TalentLayer, Executive Lead',
     description:
-      'an API layer connecting the worlds marketplaces. 3 platforms integrated, 12K users, 11K revenue, etc.',
+      'the protocol network for storing and accessing verified work history and reviews',
     year: '🟢 July 2022 - Present',
     tags: [],
     url: 'https://www.talentlayer.org/',
