@@ -29,10 +29,10 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
             className="underline"
             rel="noreferrer"
           >
-            TalentLayer
-          </a>
-          : TalentLayer is a protocol network for storing and accessing verified
-          work history and reviews.
+            Revyou
+          </a>{' '}
+          (formerly TalentLayer): a platform that helps recruiters connect with
+          top freelancers with verified availability.
         </Text>
         <br />
         <Text>
@@ -130,9 +130,9 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
       <div className="mt-12">
         <H3 className="mb-3">hackathon projects</H3>
         <Text className="mb-6">
-          I&apos;ve been to 13 hackathons the past year and a half. Most of the
-          time, I&apos;m there building proofs of concept on TalentLayer.
-          I&apos;ve won prizes at the past 6 that I&apos;ve hacked at.
+          I&apos;ve been to 15 hackathons in the past two years. Most of the
+          time, I&apos;m there building work tech proofs of concepts. I&apos;ve
+          won prizes at the past 6 that I&apos;ve hacked at.
         </Text>
         {/* <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))] gap-4">
           {filteredProjectsHack.map((project) => (

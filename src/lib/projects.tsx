@@ -18,13 +18,13 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: 'TalentLayer, Executive Lead',
+    title: 'Revyou, CEO',
     description:
-      'the protocol network for storing and accessing verified work history and reviews',
+      'a platform that helps recruiters connect with top freelancers with verified availability.  pivoted from TalentLayer, an infra for interoperable reputation.',
     year: '🟢 July 2022 - Present',
     tags: [],
-    url: 'https://www.talentlayer.org/',
-    logo: '/talentlayer.png',
+    url: 'https://www.revyou.xyz/',
+    logo: '/Revyou1.png',
     current: true,
   },
   {
