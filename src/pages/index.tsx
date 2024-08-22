@@ -31,8 +31,18 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
           >
             Revyou
           </a>{' '}
-          (formerly TalentLayer): a platform that helps recruiters connect with
-          top freelancers with verified availability.
+          a platform that helps recruiters connect with top freelancers with
+          verified availability. Revyou will be the first mainstream usecase
+          built on the a{' '}
+          <a
+            href="https://core.telegram.org/bots/webapps"
+            target="_blank"
+            className="underline"
+            rel="noreferrer"
+          >
+            Telegram Mini App
+          </a>{' '}
+          infrastructure.
         </Text>
         <br />
         <Text>
