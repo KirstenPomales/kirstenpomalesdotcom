@@ -20,7 +20,7 @@ export const projects: Project[] = [
   {
     title: 'Revyou, CEO',
     description:
-      'a platform that helps recruiters connect with top freelancers with verified availability.  pivoted from TalentLayer, an infra for interoperable reputation.',
+      'an app  that helps freelancers and recruiters connect and build uncensorable reputations.  pivoted from TalentLayer, an infra for interoperable reputation.',
     year: '🟢 July 2022 - Present',
     tags: [],
     url: 'https://www.revyou.xyz/',

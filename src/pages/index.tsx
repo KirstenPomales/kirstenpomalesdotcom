@@ -30,10 +30,9 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
             rel="noreferrer"
           >
             Revyou
-          </a>{' '}
-          A platform that helps freelancers and recruiters connect and build
-          uncensorable reputations. Revyou will be the first mainstream usecase
-          built on the a{' '}
+          </a>
+          , a platform that helps freelancers and recruiters connect and build
+          uncensorable reputations. Revyou will be the first mainstream{' '}
           <a
             href="https://core.telegram.org/bots/webapps"
             target="_blank"
@@ -41,8 +40,8 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
             rel="noreferrer"
           >
             Telegram Mini App
-          </a>{' '}
-          stack.
+          </a>
+          .
         </Text>
         <br />
         <Text>
@@ -71,10 +70,10 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
         </Text>
         <br />
         <Text>
-          I spent 4 years working in politics on issues like freedom of speech,
-          corporate cronyism, and criminal justice reform. I left when I
-          realized it is faster to build tech that enables freedom instead of
-          fighting existing systems.
+          Before that, I spent 4 years working in politics on issues like
+          freedom of speech, corporate cronyism, and criminal justice reform. I
+          left when I realized it is faster to build tech that enables freedom
+          instead of fighting existing systems.
         </Text>
         <br />
         <Text>
@@ -111,7 +110,7 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
       <div className="mt-12">
         <H3 className="mb-3">growth mode</H3>
         <Text className="mb-6">
-          My biggest goal right now is making TalentLayer grow.
+          My biggest goal right now is making Revyou grow.
         </Text>
         <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))] gap-4">
           {current.map((project) => (
