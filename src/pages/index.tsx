@@ -31,8 +31,8 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
           >
             Revyou
           </a>{' '}
-          a platform that helps recruiters connect with top freelancers with
-          verified availability. Revyou will be the first mainstream usecase
+          A platform that helps freelancers and recruiters connect and build
+          uncensorable reputations. Revyou will be the first mainstream usecase
           built on the a{' '}
           <a
             href="https://core.telegram.org/bots/webapps"
@@ -42,7 +42,7 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
           >
             Telegram Mini App
           </a>{' '}
-          infrastructure.
+          stack.
         </Text>
         <br />
         <Text>
@@ -69,9 +69,12 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
           (European Commission blockchain association), The IEEE, Fedex
           Institute of Technology, Hyperledger Foundation and others.
         </Text>
+        <br />
         <Text>
           I spent 4 years working in politics on issues like freedom of speech,
-          corporate cronyism, and criminal justice reform.
+          corporate cronyism, and criminal justice reform. I left when I
+          realized it is faster to build tech that enables freedom instead of
+          fighting existing systems.
         </Text>
 
         <br />
