@@ -76,7 +76,6 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
           realized it is faster to build tech that enables freedom instead of
           fighting existing systems.
         </Text>
-
         <br />
         <Text>
           My most fundamental belief is that{' '}
