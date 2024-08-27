@@ -69,11 +69,10 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
           (European Commission blockchain association), The IEEE, Fedex
           Institute of Technology, Hyperledger Foundation and others.
         </Text>
-        {/* <br />
         <Text>
-          Self-taught fullstack developer. Dropout from a school you&apos;ve
-          never heard of.
-        </Text> */}
+          I spent 4 years working in politics on issues like freedom of speech,
+          corporate cronyism, and criminal justice reform.
+        </Text>
 
         <br />
         <Text>
