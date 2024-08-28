@@ -54,6 +54,19 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
         </Text>
         <br />
         <Text>
+          My 1st crypto transaction was buying a pocket knife with $DASH during{' '}
+          <a
+            href="https://en.wikipedia.org/wiki/Porcupine_Freedom_Festival"
+            target="_blank"
+            className="underline"
+            rel="noreferrer"
+          >
+            PorcFest
+          </a>{' '}
+          2018.
+        </Text>
+        <br />
+        <Text>
           I ran an IEEE research group on Blockchain Governance from 2019 to
           2021.{' '}
           <a
@@ -66,7 +79,8 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
           </a>{' '}
           on blockchain governance and ecosystem design, hosted by INATBA
           (European Commission blockchain association), The IEEE, Fedex
-          Institute of Technology, Hyperledger Foundation and others.
+          Institute of Technology, Hyperledger Foundation and others. I also
+          consulted multiple enterprise blockchain projects during that time.
         </Text>
         <br />
         <Text>
