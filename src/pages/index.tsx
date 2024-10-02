@@ -31,17 +31,8 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
           >
             Revyou
           </a>
-          , a platform that helps freelancers and recruiters connect and build
-          uncensorable reputations. Revyou will be the first mainstream{' '}
-          <a
-            href="https://core.telegram.org/bots/webapps"
-            target="_blank"
-            className="underline"
-            rel="noreferrer"
-          >
-            Telegram Mini App
-          </a>
-          .
+          , an app that helps freelancers get discovered by hirers and show off
+          their work history.
         </Text>
         <br />
         <Text>

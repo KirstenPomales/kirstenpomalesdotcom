@@ -20,10 +20,19 @@ export const projects: Project[] = [
   {
     title: 'Revyou, CEO',
     description:
-      'an app  that helps freelancers and recruiters connect and build uncensorable reputations.  pivoted from TalentLayer, an infra for interoperable reputation.',
-    year: '🟢 July 2022 - Present',
+      'an app that helps freelancers get discovered by hirers and show off their work history. pivoted from TalentLayer with the same team.',
+    year: '🟢 Sept 2024 - Present',
     tags: [],
-    url: 'https://www.revyou.xyz/',
+    url: 'https://www.revyou.me/',
+    logo: '/Revyou1.png',
+    current: true,
+  },
+  {
+    title: 'TalentLayer, Executive Lead',
+    description: 'a blockchain infrastructure for work reputation.',
+    year: '🔴 July 2022 - Sept 2024',
+    tags: [],
+    url: 'https://www.medium.com/talentlayer',
     logo: '/Revyou1.png',
     current: true,
   },
@@ -31,7 +40,7 @@ export const projects: Project[] = [
     title: 'IEEE P2145 Blockchian Governance Working Group, Vice Chair',
     description:
       'a working group on blockchian governnce standards. grew it from 0 to 200 contributors, with final research being published in 2023.',
-    year: '🟢 Nov 2019 - August 2021',
+    year: '🔴 Nov 2019 - August 2021',
     tags: [],
     url: 'https://sagroups.ieee.org/ieee2145/',
     logo: '/ieee.png',
