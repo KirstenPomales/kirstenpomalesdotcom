@@ -20,7 +20,7 @@ export const projects: Project[] = [
   {
     title: 'Revyou, CEO',
     description:
-      'an app that helps freelancers get discovered by hirers and show off their work history. pivoted from TalentLayer with the same team.',
+      'the easiest way to aggregate and show off your work reputation. pivoted from TalentLayer with the same team.',
     year: '🟢 Sept 2024 - Present',
     tags: [],
     url: 'https://www.revyou.me/',
@@ -28,12 +28,13 @@ export const projects: Project[] = [
     current: true,
   },
   {
-    title: 'TalentLayer, Executive Lead',
-    description: 'a blockchain infrastructure for work reputation.',
-    year: '🔴 July 2022 - Sept 2024',
+    title: 'TalentLayer, Exec Lead',
+    description:
+      'an open-source blockchain infrastructure for hiring marketplaces with interoperable reputation. EU grant backed.',
+    year: '🟡 July 2022 - Sept 2024',
     tags: [],
-    url: 'https://www.medium.com/talentlayer',
-    logo: '/Revyou1.png',
+    url: 'https://docs.talentlayer.org/',
+    logo: '/talentlayer.png',
     current: true,
   },
   {
@@ -69,7 +70,7 @@ export const projects: Project[] = [
   {
     title: 'SponPay, COO',
     description:
-      'an micro-influencer marketing marketplace. had 40 or so users and some transactions, but we had trouble scaling past small volume. today there are dozens of similar platforms succeeding big - we were too early.',
+      'an micro-influencer marketing marketplace. had a few 100 users and revenue, but we had trouble scaling. in 2018, most businesses did not know about influencer marketing. now, micro-influencers are the #1 marketing channel globally. we were too early!',
     tags: [],
     year: '🔴 Nov 2018 - April 2019',
     url: 'https://www.crunchbase.com/organization/sponpay',

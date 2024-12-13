@@ -22,18 +22,20 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
       <div className="mt-6">
         <H1 className="mb-6">hey, i&apos;m kirsten!</H1>
         <Text>
-          I spend most of my time leading the team behind{' '}
+          I&apos;ve spent the past few years building decentralized apps and and
+          open-source software communities (cc:{' '}
           <a
-            href="https://www.talentlayer.org"
+            href="https://docs.talentlayer.org/"
             target="_blank"
             className="underline"
             rel="noreferrer"
           >
-            Revyou
+            TalentLayer
           </a>
-          , an app that helps freelancers get discovered by hirers and show off
-          their work history.
+          ). Currently exploring something new.
         </Text>
+        <br />
+        <Text>Dropout and self-taught dev.</Text>
         <br />
         <Text>
           I write shitty code, but I build great teams. I&apos;ve been{' '}
@@ -77,8 +79,12 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
         <Text>
           Before that, I spent 4 years working in politics on issues like
           freedom of speech, corporate cronyism, and criminal justice reform. I
-          left when I realized it is faster to build tech that enables freedom
-          instead of fighting existing systems.
+          left when I realized{' '}
+          <i>
+            it is faster to build tech that enables freedom instead of fighting
+            existing systems
+          </i>
+          .
         </Text>
         <br />
         <Text>
@@ -88,8 +94,6 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
           Anything can be done by anyone with enough willpower and grit. We make
           our own reality. When we realize this, we are free.
         </Text>
-        <br />
-        <Text>Dropout and self-taught dev.</Text>
         <br />
         <Text>
           Ask me about{' '}
@@ -115,7 +119,7 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
       <div className="mt-12">
         <H3 className="mb-3">growth mode</H3>
         <Text className="mb-6">
-          My biggest goal right now is making Revyou grow.
+          I&apos;m building a few projects at the moment. Check them out here!
         </Text>
         <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))] gap-4">
           {current.map((project) => (
@@ -127,6 +131,10 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
       {/* Projects */}
       <div className="mt-12">
         <H3 className="mb-3">prior startups</H3>
+        <Text className="mb-6">
+          I&apos;ve built multiple VC-backed, revenue generating startups like
+          marketplaces, data infra, and more.
+        </Text>
         <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))] gap-4">
           {filteredProjects.map((project) => (
             <ProjectCard key={project.title} project={project} />
@@ -145,7 +153,7 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
       <div className="mt-12">
         <H3 className="mb-3">hackathon projects</H3>
         <Text className="mb-6">
-          I&apos;ve been to 15 hackathons in the past two years. Most of the
+          I&apos;ve been to 15+ hackathons in the past two years. Most of the
           time, I&apos;m there building work tech proofs of concepts. I&apos;ve
           won prizes at the past 6 that I&apos;ve hacked at.
         </Text>
@@ -155,7 +163,7 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
           ))}
         </div> */}
         <div className="mt-6 flex justify-center">
-          <a href="https://linktr.ee/kphacks" target="_blank" rel="noreferrer">
+          <a href="https://revyou.me/kphacks" target="_blank" rel="noreferrer">
             <a className="text-primary text-center bg-base-200 rounded-lg px-4 py-2">
               view the projects
             </a>
