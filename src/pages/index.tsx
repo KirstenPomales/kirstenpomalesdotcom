@@ -32,6 +32,15 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
           >
             TalentLayer
           </a>
+          ,{' '}
+          <a
+            href="https://revyou.me/"
+            target="_blank"
+            className="underline"
+            rel="noreferrer"
+          >
+            Revyou
+          </a>
           ). Currently exploring something new.
         </Text>
         <br />
