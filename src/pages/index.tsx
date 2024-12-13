@@ -41,7 +41,7 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
           >
             Revyou
           </a>
-          ). Currently exploring something new.
+          ).
         </Text>
         <br />
         <Text>Dropout and self-taught dev.</Text>
