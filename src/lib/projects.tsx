@@ -18,6 +18,16 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: 'Recursive Studio, Partner',
+    description:
+      'a developer guild building open-source software and help startups ship powerful crypto and AI products',
+    year: '🟢 Jan 2025 - Present',
+    tags: [],
+    url: 'https://www.recursive.so/',
+    logo: '/recursive.png',
+    current: true,
+  },
+  {
     title: 'Revyou, CEO',
     description:
       'the easiest way to aggregate and show off your work reputation. pivoted from TalentLayer with the same team.',
@@ -25,17 +35,17 @@ export const projects: Project[] = [
     tags: [],
     url: 'https://www.revyou.me/',
     logo: '/Revyou1.png',
-    current: true,
+    showOnHomepage: true,
   },
   {
     title: 'TalentLayer, Exec Lead',
     description:
-      'an open-source blockchain infrastructure for hiring marketplaces with interoperable reputation. EU grant backed.',
+      'an open-source blockchain infrastructure for hiring marketplaces with interoperable reputation.',
     year: '🟡 July 2022 - Sept 2024',
     tags: [],
     url: 'https://docs.talentlayer.org/',
     logo: '/talentlayer.png',
-    current: true,
+    showOnHomepage: true,
   },
   {
     title: 'IEEE P2145 Blockchian Governance Working Group, Vice Chair',
@@ -65,7 +75,6 @@ export const projects: Project[] = [
     year: '🟢 June 2021 - July 2022',
     url: 'https://facings.io/',
     logo: '/facings.png',
-    showOnHomepage: true,
   },
   {
     title: 'SponPay, COO',
@@ -76,7 +85,6 @@ export const projects: Project[] = [
     url: 'https://www.crunchbase.com/organization/sponpay',
     githubUrl: '',
     logo: '/sponpay.png',
-    showOnHomepage: true,
   },
   {
     title: 'Pollr, Business Development Officer',

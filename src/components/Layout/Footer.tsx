@@ -9,11 +9,11 @@ const Footer = () => {
         <hr className="w-full border-1 border-base-200 mb-8" />
         <div className="flex gap-10">
           <a
-            href="https://linktr.ee/hellokp"
+            href="https://x.com/kirstenrpomales"
             target="_blank"
             rel="noopener noreferrer"
           >
-            linktree
+            follow me on X
           </a>
           <a
             href="https://open.spotify.com/playlist/0GurmcNMc6cV0bUh72dzZl"

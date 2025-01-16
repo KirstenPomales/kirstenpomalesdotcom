@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { Post } from 'contentlayer/generated'
 
@@ -20,10 +21,32 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
     <>
       {/* Bio */}
       <div className="mt-6">
-        <H1 className="mb-6">hey, i&apos;m kirsten!</H1>
+        <div className="relative mb-50 size-[200px] shrink-0 lg:mb-0">
+          <Image
+            src="/kirsten-glow.png"
+            alt="Kirsten Pomales"
+            layout="fill"
+            className="rounded-2xl object-contain"
+          />
+        </div>
+        <H1 className="mb-6 mt-10">hey, i&apos;m kirsten!</H1>
         <Text>
-          I&apos;ve spent the past few years building decentralized apps and and
-          open-source software communities (cc:{' '}
+          I&apos;m building{' '}
+          <a
+            href="https://recursive.so/"
+            target="_blank"
+            className="underline"
+            rel="noreferrer"
+          >
+            Recursive
+          </a>
+          , a developer guild. We build open-source software and help startups
+          ship powerful crypto and AI products.
+        </Text>
+        <br />
+        <Text>
+          I&apos;ve spent the past few years building VC backed protocol
+          networks and and open-source software communities (cc:{' '}
           <a
             href="https://docs.talentlayer.org/"
             target="_blank"
@@ -47,7 +70,7 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
         <Text>Dropout and self-taught dev.</Text>
         <br />
         <Text>
-          I write shitty code, but I build great teams. I&apos;ve been{' '}
+          I&apos;ve been{' '}
           <Link href="/projects">
             <a className="underline">building software startups</a>
           </Link>{' '}
@@ -119,8 +142,8 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
         <br />
 
         <Text>
-          Currently not based anywhere, but you can find me at the next
-          blockchain hackathon.
+          Attempting to be based in Portugal, but usually hopping blockchain
+          hackathons.
         </Text>
       </div>
 
