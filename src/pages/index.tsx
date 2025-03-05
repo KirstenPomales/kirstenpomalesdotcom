@@ -31,7 +31,16 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
         </div>
         <H1 className="mb-6 mt-10">hey, i&apos;m kirsten!</H1>
         <Text>
-          I&apos;m building{' '}
+          For the past three years, I&apos;ve lead{' '}
+          <a
+            href="https://talentlayer.org"
+            target="_blank"
+            className="underline"
+            rel="noreferrer"
+          >
+            TalentLayer Collective
+          </a>
+          , a developer guild building open-source and crypto tech. I also run{' '}
           <a
             href="https://recursive.so/"
             target="_blank"
@@ -40,31 +49,13 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
           >
             Recursive
           </a>
-          , a developer guild. We build open-source software and help startups
-          ship powerful crypto and AI products.
+          , a software development studio helping teams build crypto and AI
+          products.
         </Text>
         <br />
         <Text>
-          I&apos;ve spent the past few years building VC backed protocol
-          networks and and open-source software communities (cc:{' '}
-          <a
-            href="https://docs.talentlayer.org/"
-            target="_blank"
-            className="underline"
-            rel="noreferrer"
-          >
-            TalentLayer
-          </a>
-          ,{' '}
-          <a
-            href="https://revyou.me/"
-            target="_blank"
-            className="underline"
-            rel="noreferrer"
-          >
-            Revyou
-          </a>
-          ).
+          I&apos;ve spent the past 8 years in crypto full-time, building VC
+          backed protocol networks and and open-source software communities.
         </Text>
         <br />
         <Text>Dropout and self-taught dev.</Text>
@@ -145,6 +136,9 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
           Attempting to be based in Portugal, but usually hopping blockchain
           hackathons.
         </Text>
+        <br />
+
+        <Text>Above all, building a tribe.</Text>
       </div>
 
       {/* Projects */}

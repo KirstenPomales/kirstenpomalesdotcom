@@ -20,7 +20,7 @@ export const projects: Project[] = [
   {
     title: 'Recursive Studio, Partner',
     description:
-      'a developer guild building open-source software and help startups ship powerful crypto and AI products',
+      'a development studio helping teams ship powerful crypto and AI products',
     year: '🟢 Jan 2025 - Present',
     tags: [],
     url: 'https://www.recursive.so/',
@@ -28,9 +28,19 @@ export const projects: Project[] = [
     current: true,
   },
   {
+    title: 'TL Collective, Founder',
+    description:
+      'a developer guild building products in ai and crypto. led by the origional team from TalentLayer protocol (see below).',
+    year: '🟢 July 2022 - Present',
+    tags: [],
+    url: 'https://www.talentlayer.org/',
+    logo: '/talentlayer-raccoon-head.png',
+    current: true,
+  },
+  {
     title: 'Revyou, CEO',
     description:
-      'the easiest way to aggregate and show off your work reputation. pivoted from TalentLayer with the same team.',
+      'the easiest way to aggregate and show off your work reputation. import and collect reviews from your clients, show them off in a stylish portfolio page.',
     year: '🟢 Sept 2024 - Present',
     tags: [],
     url: 'https://www.revyou.me/',
@@ -38,9 +48,9 @@ export const projects: Project[] = [
     showOnHomepage: true,
   },
   {
-    title: 'TalentLayer, Exec Lead',
+    title: 'TalentLayer Protocol, CEO',
     description:
-      'an open-source blockchain infrastructure for hiring marketplaces with interoperable reputation.',
+      'an open-source blockchain infrastructure decentralized marketplaces with interoperable reputation. backed by outlier ventures, founders of The Graph, Kleros, +',
     year: '🟡 July 2022 - Sept 2024',
     tags: [],
     url: 'https://docs.talentlayer.org/',
