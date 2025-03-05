@@ -31,7 +31,7 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
         </div>
         <H1 className="mb-6 mt-10">hey, i&apos;m kirsten!</H1>
         <Text>
-          For the past three years, I&apos;ve lead{' '}
+          I lead{' '}
           <a
             href="https://talentlayer.org"
             target="_blank"
@@ -40,7 +40,8 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
           >
             TalentLayer Collective
           </a>
-          , a developer guild building open-source and crypto tech. I also run{' '}
+          , a developer guild that&apos;s been building open-source and crypto
+          tech together for 3+ years. I also run{' '}
           <a
             href="https://recursive.so/"
             target="_blank"
@@ -55,7 +56,8 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
         <br />
         <Text>
           I&apos;ve spent the past 8 years in crypto full-time, building VC
-          backed protocol networks and and open-source software communities.
+          backed protocol networks, enterprise blockchain systems, & open-source
+          software communities.
         </Text>
         <br />
         <Text>Dropout and self-taught dev.</Text>
