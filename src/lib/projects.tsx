@@ -28,7 +28,7 @@ export const projects: Project[] = [
     current: true,
   },
   {
-    title: 'TL Collective, Founder',
+    title: 'TalentLayer Guild, Founder',
     description:
       'a developer guild building products in ai and crypto. led by the origional team from TalentLayer protocol (see below).',
     year: '🟢 July 2022 - Present',

@@ -38,7 +38,7 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
             className="underline"
             rel="noreferrer"
           >
-            TalentLayer Collective
+            TalentLayer
           </a>
           , a developer guild that&apos;s been building open-source and crypto
           tech together for 3+ years. I also run{' '}
