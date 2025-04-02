@@ -28,6 +28,16 @@ export const projects: Project[] = [
     current: true,
   },
   {
+    title: 'The Intern, CEO',
+    description:
+      'an AI automation SaaS for creating fully autonamous social media accounts',
+    year: '🟢 March 2025 - Present',
+    tags: [],
+    url: 'https://www.theintern.fun/',
+    logo: '/theintern-pfp.png',
+    current: true,
+  },
+  {
     title: 'TalentLayer Guild, Founder',
     description:
       'a developer guild building products in ai and crypto. led by the origional team from TalentLayer protocol (see below).',
