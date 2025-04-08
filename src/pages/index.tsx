@@ -31,6 +31,19 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
         </div>
         <H1 className="mb-6 mt-10">hey, i&apos;m kirsten!</H1>
         <Text>
+          Cofounder at{' '}
+          <a
+            href="https://theintern.fun"
+            target="_blank"
+            className="underline"
+            rel="noreferrer"
+          >
+            TheIntern.fun
+          </a>
+          , a platform for building fully autonamous X marketing accounts.
+        </Text>
+        <br />
+        <Text>
           I lead{' '}
           <a
             href="https://talentlayer.org"
@@ -41,7 +54,7 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
             TalentLayer
           </a>
           , a developer guild that&apos;s been building open-source and crypto
-          tech together for 3+ years. I also run{' '}
+          tech together for 3+ years. I&apos;m also a partner at{' '}
           <a
             href="https://recursive.so/"
             target="_blank"
