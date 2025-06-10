@@ -31,30 +31,7 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
         </div>
         <H1 className="mb-6 mt-10">hey, i&apos;m kirsten!</H1>
         <Text>
-          Cofounder at{' '}
-          <a
-            href="https://theintern.fun"
-            target="_blank"
-            className="underline"
-            rel="noreferrer"
-          >
-            TheIntern.fun
-          </a>
-          , a platform for building fully autonamous X marketing accounts.
-        </Text>
-        <br />
-        <Text>
           I lead{' '}
-          <a
-            href="https://talentlayer.org"
-            target="_blank"
-            className="underline"
-            rel="noreferrer"
-          >
-            TalentLayer
-          </a>
-          , a developer guild that&apos;s been building open-source and crypto
-          tech together for 3+ years. I&apos;m also a partner at{' '}
           <a
             href="https://recursive.so/"
             target="_blank"
@@ -63,14 +40,50 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
           >
             Recursive
           </a>
-          , a software development studio helping teams build crypto and AI
-          products.
+          , the software development studio behind your favorite crypto and AI
+          startups.
         </Text>
         <br />
         <Text>
-          I&apos;ve spent the past 8 years in crypto full-time, building VC
+          I&apos;m also CEO at{' '}
+          <a
+            href="https://theintern.fun"
+            target="_blank"
+            className="underline"
+            rel="noreferrer"
+          >
+            TheIntern.fun
+          </a>
+          , a platform for building fully autonamous X accounts.
+        </Text>
+        <br />
+        <Text>
+          For the past 3+ years I&apos;ve lead{' '}
+          <a
+            href="https://talentlayer.org"
+            target="_blank"
+            className="underline"
+            rel="noreferrer"
+          >
+            TalentLayer Guild
+          </a>
+          , a vibey crew building open-source, freedom-oriented, blockchain tech
+          together.
+        </Text>
+        <br />
+        <Text>
+          I&apos;ve spent the past 8+ years in crypto full-time, building VC
           backed protocol networks, enterprise blockchain systems, & open-source
-          software communities.
+          software communities. Read my work bio{' '}
+          <a
+            href="https://www.recursive.so/leadership#kirsten"
+            target="_blank"
+            className="underline"
+            rel="noreferrer"
+          >
+            here
+          </a>
+          .
         </Text>
         <br />
         <Text>Dropout and self-taught dev.</Text>
@@ -146,13 +159,11 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
           .
         </Text>
         <br />
-
         <Text>
           Attempting to be based in Portugal, but usually hopping blockchain
           hackathons.
         </Text>
         <br />
-
         <Text>Above all, building a tribe.</Text>
       </div>
 
