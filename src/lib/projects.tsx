@@ -21,26 +21,26 @@ export const projects: Project[] = [
     title: 'Recursive Studio, Partner',
     description:
       'a development studio helping teams ship powerful crypto and AI products',
-    year: '🟢 Jan 2025 - Present',
+    year: '🟢 Sept 2024 - Present',
     tags: [],
     url: 'https://www.recursive.so/',
     logo: '/recursive.png',
     current: true,
   },
   {
-    title: 'The Intern, CEO',
+    title: 'ReplyGuy.ai, Co-founder',
     description:
-      'an AI automation SaaS for creating fully autonamous social media accounts',
+      'the AI agent system that helps you grow your X following while you sleep',
     year: '🟢 March 2025 - Present',
     tags: [],
-    url: 'https://www.theintern.fun/',
-    logo: '/theintern-pfp.png',
+    url: 'https://www.replyguy.ai/',
+    logo: '/reply-guy-logo.png',
     current: true,
   },
   {
     title: 'TalentLayer Guild, Founder',
     description:
-      'a developer guild building products in ai and crypto. led by the origional team from TalentLayer protocol (see below).',
+      'a developer guild building products in ai and crypto. led by the origional team from TalentLayer protocol (see prev projects)',
     year: '🟢 July 2022 - Present',
     tags: [],
     url: 'https://www.talentlayer.org/',
@@ -50,8 +50,8 @@ export const projects: Project[] = [
   {
     title: 'Revyou, CEO',
     description:
-      'the easiest way to aggregate and show off your work reputation. import and collect reviews from your clients, show them off in a stylish portfolio page.',
-    year: '🟢 Sept 2024 - Present',
+      'the easiest way to aggregate and show off your work reputation. import and collect reviews from your clients, show them off in a stylish portfolio page',
+    year: '🟡 Sept 2024 - Dec 2024',
     tags: [],
     url: 'https://www.revyou.me/',
     logo: '/Revyou1.png',
