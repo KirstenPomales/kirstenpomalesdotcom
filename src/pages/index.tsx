@@ -45,16 +45,16 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
         </Text>
         <br />
         <Text>
-          I&apos;m also CEO at{' '}
+          I&apos;m also a founder at{' '}
           <a
-            href="https://theintern.fun"
+            href="https://replyguy.ai"
             target="_blank"
             className="underline"
             rel="noreferrer"
           >
-            TheIntern.fun
+            ReplyGuy.ai
           </a>
-          , a platform for building fully autonamous X accounts.
+          , an X growth hacking platform.
         </Text>
         <br />
         <Text>
