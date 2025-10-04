@@ -45,36 +45,13 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
         </Text>
         <br />
         <Text>
-          I&apos;m also a founder at{' '}
-          <a
-            href="https://replyguy.ai"
-            target="_blank"
-            className="underline"
-            rel="noreferrer"
-          >
-            ReplyGuy.ai
-          </a>
-          , an X growth hacking platform.
-        </Text>
-        <br />
-        <Text>
-          For the past 3+ years I&apos;ve lead{' '}
-          <a
-            href="https://talentlayer.org"
-            target="_blank"
-            className="underline"
-            rel="noreferrer"
-          >
-            TalentLayer Guild
-          </a>
-          , a vibey crew building open-source, freedom-oriented, blockchain tech
-          together.
+          I&apos;ve been building a stealth startup for the past few months. More details on that coming soon.{' '}
         </Text>
         <br />
         <Text>
           I&apos;ve spent the past 8+ years in crypto full-time, building VC
           backed protocol networks, enterprise blockchain systems, & open-source
-          software communities. Read my work bio{' '}
+          software communities with groups like the IEEE, European Comission, and others.Read my work bio{' '}
           <a
             href="https://www.recursive.so/leadership#kirsten"
             target="_blank"
@@ -256,3 +233,4 @@ export async function getStaticProps() {
     },
   }
 }
+
