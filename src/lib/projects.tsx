@@ -1,5 +1,4 @@
-import CodeshareLogo from '@/icons/codeshare.svg'
-import CryviaLogo from '@/icons/cryvia.svg'
+
 
 export interface Project {
   title: string
@@ -18,6 +17,16 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: 'Stealth, Cofounder',
+    description:
+      'a stealth AI security startup.',
+    year: '🟢 Sept 2025 - Present',
+    tags: [],
+    url: 'https://www.nolais.tyx',
+    logo: '/stealth.png',
+    current: true,
+  },
+  {
     title: 'Recursive Studio, Partner',
     description:
       'a development studio helping teams ship powerful crypto and AI products',
@@ -30,12 +39,12 @@ export const projects: Project[] = [
   {
     title: 'ReplyGuy.ai, Co-founder',
     description:
-      'the AI agent system that helps you grow your X following while you sleep',
-    year: '🟢 March 2025 - Present',
+      'the AI agent system that helps you grow your X following while you sleep. project profitable and still being run by my cofounders.',
+    year: '🟢 March 2025 - July 2025',
     tags: [],
     url: 'https://www.replyguy.ai/',
     logo: '/reply-guy-logo.png',
-    current: true,
+   
   },
   {
     title: 'TalentLayer Guild, Founder',
@@ -45,7 +54,7 @@ export const projects: Project[] = [
     tags: [],
     url: 'https://www.talentlayer.org/',
     logo: '/talentlayer-raccoon-head.png',
-    current: true,
+  
   },
   {
     title: 'Revyou, CEO',
@@ -55,7 +64,7 @@ export const projects: Project[] = [
     tags: [],
     url: 'https://www.revyou.me/',
     logo: '/Revyou1.png',
-    showOnHomepage: true,
+
   },
   {
     title: 'TalentLayer Protocol, CEO',
@@ -90,11 +99,12 @@ export const projects: Project[] = [
   {
     title: 'Facings, COO',
     description:
-      'a white-label NFT marketplace solution for influencers, sports collectables, clothing companies, and more. grew it from 5 to 12 people, generated revenue, raised pre-seed round. its still running today w/o me.',
+      'a white-label NFT marketplace solution for influencers, sports collectables, clothing companies, and more. grew it from 5 to 12 people, generated revenue, raised pre-seed round.',
     tags: [],
     year: '🟢 June 2021 - July 2022',
     url: 'https://facings.io/',
     logo: '/facings.png',
+    showOnHomepage: true,
   },
   {
     title: 'SponPay, COO',

@@ -4,7 +4,7 @@ import { NextSeo } from 'next-seo'
 import { Post } from 'contentlayer/generated'
 
 import BlogPostPreview from '@/components/BlogPost/BlogPostPreview'
-import { H1, H3, Text } from '@/components/Text'
+import { H4, Text } from '@/components/Text'
 import { getAllPosts } from '@/lib/posts'
 
 const url = 'https://kirstenpomales.com/blog'
@@ -30,7 +30,7 @@ const BlogPage = ({ posts }: { posts: Post[] }) => {
           description,
         }}
       />
-      <H3 className="mt-6 mb-3">writing</H3>
+      <H4 className="mt-6 mb-3">writing</H4>
       <Text className="mb-8">
         I write occasionally about tech, startups, and other things.
       </Text>

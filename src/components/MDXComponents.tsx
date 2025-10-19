@@ -2,6 +2,8 @@ import { ReactNode } from 'react'
 import Image, { ImageProps } from 'next/image'
 import Link from 'next/link'
 
+import { H4 } from '@/components/Text'
+
 const CustomLink = ({ href, ...rest }: { href?: string }) => {
   const isInternalLink = href && (href.startsWith('/') || href.startsWith('#'))
 
@@ -32,6 +34,9 @@ const MDXComponents = {
     </div>
   ),
   a: CustomLink,
+  h3: ({ children, ...props }: { children: ReactNode }) => (
+    <H4 {...props}>{children}</H4>
+  ),
 }
 
 export default MDXComponents

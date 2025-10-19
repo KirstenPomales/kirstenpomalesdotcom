@@ -1,35 +1,26 @@
-import Image from 'next/image'
+
 import Link from 'next/link'
 import { Post } from 'contentlayer/generated'
 
 import BlogPostPreview from '@/components/BlogPost/BlogPostPreview'
 import ProjectCard from '@/components/ProjectCard'
-import { H1, H3, Text } from '@/components/Text'
+import { H1, H3, H4, Text } from '@/components/Text'
 import { getLatestPosts } from '@/lib/posts'
 import { projects } from '@/lib/projects'
 
 const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
   const filteredProjects = projects.filter((project) => project.showOnHomepage)
-  const filteredProjectsHack = projects.filter(
-    (project) => project.showOnHomepageHack,
-  )
-  const personalProjects = projects.filter((project) => !project.hackathon)
-  const hackathonProjects = projects.filter((project) => project.hackathon)
+
+  
   const current = projects.filter((project) => project.current)
 
   return (
     <>
       {/* Bio */}
       <div className="mt-6">
-        <div className="relative mb-50 size-[200px] shrink-0 lg:mb-0">
-          <Image
-            src="/kirsten-glow.png"
-            alt="Kirsten Pomales"
-            layout="fill"
-            className="rounded-2xl object-contain"
-          />
-        </div>
         <H1 className="mb-6 mt-10">hey, i&apos;m kirsten!</H1>
+        <H4 className="mb-6">i do ai, decentralized systems, and sometimes lobbying.</H4>
+        
         <Text>
           I lead{' '}
           <a
@@ -45,13 +36,39 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
         </Text>
         <br />
         <Text>
-          I&apos;ve been building a stealth startup for the past few months. More details on that coming soon.{' '}
+        <strong>I&apos;ve been building a stealth startup for the past few months. More details on that coming soon.</strong>
+        </Text>
+
+        <H3 className="mb-4 mt-8">/startups</H3>
+        <Text>
+          I&apos;m a 2x venture backed founder who loves ai and{' '}
+          <a
+            href="https://medium.com/talentlayer/the-great-evolution-of-the-marketplace-market-networks-unbundling-and-user-owned-networks-b2ab9a086ec"
+            target="_blank"
+            className="underline"
+            rel="noreferrer"
+          >
+            multi-sided marketplaces
+          </a>
+          .
         </Text>
         <br />
         <Text>
-          I&apos;ve spent the past 8+ years in crypto full-time, building VC
+          I&apos;ve been{' '}
+          <Link href="/projects">
+            <a className="underline">building software startups</a>
+          </Link>{' '}
+          since I was 16. I&apos;ve tried a lot, failed a lot, and learned a
+          lot.
+        </Text>
+        <br />
+        <Text>Dropout and self-taught dev.</Text>
+
+        <H3 className="mb-4 mt-8">/decentralized tech</H3>
+        <Text>
+          I&apos;ve spent the past 8+ years in crypto, building VC
           backed protocol networks, enterprise blockchain systems, & open-source
-          software communities with groups like the IEEE, European Comission, and others.Read my work bio{' '}
+          software communities with groups like the IEEE, European Comission, and others. Read my work bio{' '}
           <a
             href="https://www.recursive.so/leadership#kirsten"
             target="_blank"
@@ -63,33 +80,8 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
           .
         </Text>
         <br />
-        <Text>Dropout and self-taught dev.</Text>
-        <br />
         <Text>
-          I&apos;ve been{' '}
-          <Link href="/projects">
-            <a className="underline">building software startups</a>
-          </Link>{' '}
-          since I was 16. I&apos;ve tried a lot, failed a lot, and learned a
-          lot.
-        </Text>
-        <br />
-        <Text>
-          My 1st crypto transaction was buying a pocket knife with $DASH during{' '}
-          <a
-            href="https://en.wikipedia.org/wiki/Porcupine_Freedom_Festival"
-            target="_blank"
-            className="underline"
-            rel="noreferrer"
-          >
-            PorcFest
-          </a>{' '}
-          2018.
-        </Text>
-        <br />
-        <Text>
-          I ran an IEEE research group on Blockchain Governance from 2019 to
-          2021.{' '}
+          I ran a 200 person IEEE standards group on Blockchain Governance from 2019 to 2021.{' '}
           <a
             href="https://www.youtube.com/channel/UCgyT_7we6YGDVQJDKZD6EBA"
             target="_blank"
@@ -105,48 +97,69 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
         </Text>
         <br />
         <Text>
-          Before that, I spent 4 years working in politics on issues like
-          freedom of speech, corporate cronyism, and criminal justice reform. I
-          left when I realized{' '}
-          <i>
-            it is faster to build tech that enables freedom instead of fighting
-            existing systems
-          </i>
-          .
+          My 1st crypto transaction was buying a pocket knife with $DASH during{' '}
+          <a
+            href="https://en.wikipedia.org/wiki/Porcupine_Freedom_Festival"
+            target="_blank"
+            className="underline"
+            rel="noreferrer"
+          >
+            PorcFest
+          </a>{' '}
+          2018.
+        </Text>
+
+        <H3 className="mb-4 mt-8">/lobbying & government relations</H3>
+        <Text>
+          Before getting into tech, I spent 4 years working in US politics on free-market issues like promoting innovation, reducing corporate cronyism, tax reform, criminal justice reform, immigration, and more. <strong>My work has impacted the passage of dozens of bills on the state and federal level.</strong>
         </Text>
         <br />
         <Text>
-          My most fundamental belief is that{' '}
-          <a className="font-bold">humans are autonomous</a>; that is, they are
+          Teams I worked with: Senator Rob Portman, Americans for Prosperity, American Petroleum Institute, Concerned Veterans of America, Libre Initiative, and others.
+        </Text>
+        <br />
+        <Text>
+          After moving to Europe in 2022, I&apos;ve secured my teams Certificate of Excellence in Innovation and major European Union grant funding.
+        </Text>
+        <br />
+        <Text>
+          <strong>Currently working on some new innovation initiatives in the US and EU. More on that soon.</strong>
+        </Text>
+
+        <H3 className="mb-4 mt-8">/personal stuff</H3>
+
+        <Text>
+          My most fundamental belief is that humans are autonomous; that is, they are
           able to take action to impact their environment and circumstances.
           Anything can be done by anyone with enough willpower and grit. We make
           our own reality. When we realize this, we are free.
         </Text>
         <br />
         <Text>
-          Ask me about{' '}
+          No one cares about your story, they just care about what you can do. I was homeless at 6. I ran away at 16. I&apos;ve worked 3 minimum wage jobs at once. I get it. Shit&apos;s hard sometimes. But that&apos;s only an excuse if you make it one.
+        </Text>
+        <br />
+        <Text>
+          I&apos;m a &quot;politically radical&quot;{' '}
           <a
             href="https://nakamotoinstitute.org/crypto-anarchist-manifesto/"
             target="_blank"
             className="underline"
             rel="noreferrer"
           >
-            Cryptoanarchy
+            Cryptoanarchist
           </a>
-          .
+          . The future is decentralized, democratized, and censorship resistant.
         </Text>
         <br />
-        <Text>
-          Attempting to be based in Portugal, but usually hopping blockchain
-          hackathons.
-        </Text>
+        <Text>Unabashed techno-optimist.</Text>
         <br />
-        <Text>Above all, building a tribe.</Text>
+        <Text>Above all, I&apos;m building a tribe.</Text>
       </div>
 
       {/* Projects */}
       <div className="mt-12">
-        <H3 className="mb-3">growth mode</H3>
+        <H4 className="mb-3">growth mode</H4>
         <Text className="mb-6">
           I&apos;m building a few projects at the moment. Check them out here!
         </Text>
@@ -159,7 +172,7 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
 
       {/* Projects */}
       <div className="mt-12">
-        <H3 className="mb-3">prior startups</H3>
+        <H4 className="mb-3">prior startups</H4>
         <Text className="mb-6">
           I&apos;ve built multiple VC-backed, revenue generating startups like
           marketplaces, data infra, and more.
@@ -180,7 +193,7 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
 
       {/* Projects */}
       <div className="mt-12">
-        <H3 className="mb-3">hackathon projects</H3>
+        <H4 className="mb-3">hackathon projects</H4>
         <Text className="mb-6">
           I&apos;ve been to 15+ hackathons in the past two years. Most of the
           time, I&apos;m there building work tech proofs of concepts. I&apos;ve
@@ -202,7 +215,7 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
 
       {/* Posts */}
       <div className="mt-12">
-        <H3 className="mb-3">latest writing</H3>
+        <H4 className="mb-3">latest writing</H4>
         <Text className="mb-6">
           I write occasionally about tech, startups, and the future of work.
         </Text>

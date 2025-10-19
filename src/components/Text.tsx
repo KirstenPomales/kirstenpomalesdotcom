@@ -20,7 +20,7 @@ export const H1 = ({ children, className }: TextProps) => (
 export const H3 = ({ children, className }: TextProps) => (
   <h3
     className={classNames(
-      'text-text-primary text-3xl md:text-4xl font-extrabold tracking-tight',
+      'text-black/50 text-xl md:text-2xl  tracking-tight',
       className,
     )}
   >

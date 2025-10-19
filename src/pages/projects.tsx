@@ -1,10 +1,9 @@
 import React from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
 import { NextSeo } from 'next-seo'
 
 import ProjectCard from '@/components/ProjectCard'
-import { H3, Text } from '@/components/Text'
+import { H4, Text } from '@/components/Text'
 import { projects } from '@/lib/projects'
 
 const url = 'https://kirstenpomales.com/projects'
@@ -27,7 +26,7 @@ const ProjectsPage = () => {
           description,
         }}
       />
-      <H3 className="mt-6 mb-3">startups</H3>
+      <H4 className="mt-6 mb-3">startups</H4>
       <Text className="mb-5">
         I&apos;ve been building software startups since I was 16. I&apos;ve
         tried a lot, failed a lot, and learned a lot.
@@ -39,7 +38,7 @@ const ProjectsPage = () => {
         ))}
       </div>
 
-      <H3 className="mt-6 mb-3">governance consulting and research</H3>
+      <H4 className="mt-6 mb-3">governance consulting and research</H4>
       <Text className="mb-5">
         I&apos;ve been leading research organizations and consulting on
         blockchian governance since 2019. I entered the space after I left a
@@ -53,7 +52,7 @@ const ProjectsPage = () => {
         ))}
       </div>
 
-      <H3 className="mt-20 mb-3">prior political work</H3>
+      <H4 className="mt-20 mb-3">prior political work</H4>
       <Text className="mb-5">
         I worked for 4 years in politics - initially grassroots campaign work,
         and later grassroots lobbying. I worked on issues I cared about, all
@@ -71,7 +70,7 @@ const ProjectsPage = () => {
       /> */}
 
       <div className="mt-12">
-        <H3 className="mb-3">hackathon projects</H3>
+        <H4 className="mb-3">hackathon projects</H4>
         <Text className="mb-6">
           I&apos;ve been to 13 hackathons the past year and a half. Most of the
           time, I&apos;m there building proofs of concept on TalentLayer.
