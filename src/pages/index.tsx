@@ -136,11 +136,7 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
         </Text>
         <br />
         <Text>
-          No one cares about your story, they just care about what you can do. I was homeless at 6. I ran away at 16. I&apos;ve worked 3 minimum wage jobs at once. I get it. Shit&apos;s hard sometimes. But that&apos;s only an excuse if you make it one.
-        </Text>
-        <br />
-        <Text>
-          I&apos;m a &quot;politically radical&quot;{' '}
+          I&apos;m a{' '}
           <a
             href="https://nakamotoinstitute.org/crypto-anarchist-manifesto/"
             target="_blank"
