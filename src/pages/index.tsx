@@ -36,7 +36,7 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
         </Text>
         <br />
         <Text>
-        <strong>I&apos;ve been building a stealth startup for the past few months. More details on that coming soon.</strong>
+        <strong>I&apos;ve been building something new for the past few months. More details on that coming soon.</strong>
         </Text>
 
         <H3 className="mb-4 mt-8">/startups</H3>
