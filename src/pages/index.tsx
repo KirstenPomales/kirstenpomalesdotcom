@@ -41,7 +41,7 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
 
         <H3 className="mb-4 mt-8">/startups</H3>
         <Text>
-          I&apos;m a 2x venture backed founder who loves ai and{' '}
+          I&apos;m a 2x venture backed founder who loves {' '}
           <a
             href="https://medium.com/talentlayer/the-great-evolution-of-the-marketplace-market-networks-unbundling-and-user-owned-networks-b2ab9a086ec"
             target="_blank"
@@ -49,7 +49,7 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
             rel="noreferrer"
           >
             multi-sided marketplaces
-          </a>
+          </a> decentralized systems, and AI.
           .
         </Text>
         <br />
