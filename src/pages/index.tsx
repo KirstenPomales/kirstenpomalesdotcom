@@ -201,9 +201,9 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
           ))}
         </div> */}
         <div className="mt-6 flex justify-center">
-          <a href="https://revyou.me/kphacks" target="_blank" rel="noreferrer">
+          <a href="https://linktr.ee/kphacks" target="_blank" rel="noreferrer">
             <a className="text-primary text-center bg-base-200 rounded-lg px-4 py-2">
-              view the projects
+              view some hacks
             </a>
           </a>
         </div>
