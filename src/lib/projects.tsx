@@ -17,16 +17,6 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: 'Stealth, Cofounder',
-    description:
-      'a stealth AI security startup.',
-    year: '🟢 Sept 2025 - Present',
-    tags: [],
-    url: 'https://www.nolais.tyx',
-    logo: '/stealth.png',
-    current: true,
-  },
-  {
     title: 'Recursive Studio, Partner',
     description:
       'a development studio helping teams ship powerful crypto and AI products',
