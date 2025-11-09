@@ -73,8 +73,9 @@ body {
 }
 
 /* Prose headings */
-.prose h2, .prose h3 {
+.prose h1, .prose h2, .prose h3 {
   @apply font-main;
+  @apply text-text-primary;
 }
 
 /* Don't apply styles to next/image in articles */

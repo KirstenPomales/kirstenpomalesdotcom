@@ -52,7 +52,7 @@ module.exports = {
               borderLeftColor: theme('colors.gray.600'),
               color: theme('colors.gray.300'),
             },
-            'h2,h3,h4,strong': {
+            'h1,h2,h3,h4,strong': {
               color: 'white',
             },
             hr: { borderColor: theme('colors.gray.700') },
