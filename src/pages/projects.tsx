@@ -54,7 +54,7 @@ const ProjectsPage = () => {
 
       <H4 className="mt-20 mb-3">prior political work</H4>
       <Text className="mb-5">
-        I worked for 4 years in politics - initially grassroots campaign work,
+        I worked for 5+ years in politics - initially grassroots campaign work,
         and later grassroots lobbying. I worked on issues I cared about, all
         around individual freedom and economic liberty - everything from
         preventing corporate bailouts to making immigration easier. I left

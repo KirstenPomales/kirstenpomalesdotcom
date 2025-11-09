@@ -50,7 +50,6 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
           >
             multi-sided marketplaces
           </a> decentralized systems, and AI.
-          .
         </Text>
         <br />
         <Text>
@@ -111,7 +110,7 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
 
         <H3 className="mb-4 mt-8">/lobbying & government relations</H3>
         <Text>
-          Before getting into tech, I spent 4 years working in US politics on free-market issues like promoting innovation, reducing corporate cronyism, tax reform, criminal justice reform, immigration, and more. <strong>My work has impacted the passage of dozens of bills on the state and federal level.</strong>
+          Before getting into tech, I spent 5+ years working in US politics on free-market issues like promoting innovation, reducing corporate cronyism, tax reform, criminal justice reform, immigration, and more. <strong>My work has impacted the passage of dozens of bills on the state and federal level.</strong>
         </Text>
         <br />
         <Text>
