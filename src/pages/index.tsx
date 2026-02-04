@@ -21,6 +21,14 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
         <H1 className="mb-6 mt-10">hey, i&apos;m kirsten!</H1>
         <H4 className="mb-6">i do ai, decentralized systems, and sometimes lobbying.</H4>
         
+        <div className="mb-6 max-w-sm">
+          <img
+            src="/kirsten.png"
+            alt="Kirsten"
+            className="rounded-lg w-full h-auto transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl cursor-pointer"
+          />
+        </div>
+        
         <Text>
           I lead{' '}
           <a

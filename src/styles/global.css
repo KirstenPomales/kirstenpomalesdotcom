@@ -209,3 +209,24 @@ pre[class*='language-'] {
 .token.italic {
   font-style: italic;
 }
+
+/* Bounce left to right animation for desktop */
+/* Outer container is max-w-3xl (768px), inner image container is max-w-sm (384px) */
+/* Bounce range: (768px - 384px) / 2 = 192px on each side to match text width */
+@keyframes bounceLeftRight {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-192px);
+  }
+  75% {
+    transform: translateX(192px);
+  }
+}
+
+@media (min-width: 768px) {
+  .bounce-desktop {
+    animation: bounceLeftRight 2s ease-in-out infinite;
+  }
+}

@@ -22,6 +22,15 @@ module.exports = {
         'base-100': 'var(--base-100)',
         'base-200': 'var(--base-200)',
       },
+      animation: {
+        scroll: 'scroll 15s linear infinite',
+      },
+      keyframes: {
+        scroll: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+      },
       typography: (theme) => ({
         DEFAULT: {
           css: {
