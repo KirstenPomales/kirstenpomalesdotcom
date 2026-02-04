@@ -37,13 +37,14 @@ export const projects: Project[] = [
    
   },
   {
-    title: 'TalentLayer Guild, Founder',
+    title: 'TalentLayer Guild, Raccoon',
     description:
-      'a developer guild building products in ai and crypto. led by the origional team from TalentLayer protocol (see prev projects)',
+      'a developer guild hopping crypto hackathons. join the next TalentLayer House!',
     year: '🟢 July 2022 - Present',
     tags: [],
     url: 'https://www.talentlayer.org/',
     logo: '/talentlayer-raccoon-head.png',
+    current: true,
   
   },
   {
