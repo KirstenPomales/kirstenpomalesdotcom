@@ -18,16 +18,17 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
     <>
       {/* Bio */}
       <div className="mt-6">
-        <H1 className="mb-6 mt-10">hey, i&apos;m kirsten!</H1>
-        <H4 className="mb-6">i do ai, decentralized systems, and sometimes lobbying.</H4>
-        
-        <div className="mb-6 max-w-sm">
+      <div className="mb-6 max-w-[150px]">
           <img
-            src="/kirsten.png"
+            src="/illuminati-1.png"
             alt="Kirsten"
             className="rounded-lg w-full h-auto transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl cursor-pointer"
           />
         </div>
+        
+        <H1 className="mb-6 mt-10">hey, i&apos;m kirsten!</H1>
+        <H4 className="mb-6">i do ai, decentralized systems, and sometimes lobbying.</H4>
+        
         
         <Text>
           I lead{' '}
