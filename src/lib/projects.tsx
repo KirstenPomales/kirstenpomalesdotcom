@@ -37,9 +37,9 @@ export const projects: Project[] = [
    
   },
   {
-    title: 'TalentLayer Guild, Raccoon',
+    title: 'TalentLayer House',
     description:
-      'a developer guild hopping crypto hackathons. join the next TalentLayer House!',
+      'a recurring hacker house at major crypto hackathons around the world!',
     year: '🟢 July 2022 - Present',
     tags: [],
     url: 'https://www.talentlayer.org/',
