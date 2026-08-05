@@ -14,22 +14,29 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
   
   const current = projects.filter((project) => project.current)
 
+  const openSourceProjects = projects.filter((project) => project.openSource)
+
   return (
     <>
       {/* Bio */}
       <div className="mt-6">
-      <div className="mb-6 max-w-[150px]">
-          <img
-            src="/illuminati-1.png"
-            alt="Kirsten"
-            className="rounded-lg w-full h-auto transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl cursor-pointer"
-          />
-        </div>
-        
-        <H1 className="mb-6 mt-10">hey, i&apos;m kirsten!</H1>
+        <H1 className="mb-6">hey, i&apos;m kirsten!</H1>
         <H4 className="mb-6">i do ai, decentralized systems, and sometimes lobbying.</H4>
         
         
+        <Text>
+          I lead the Movement team at{' '}
+          <a
+            href="https://logos.co/movement"
+            target="_blank"
+            className="underline"
+            rel="noreferrer"
+          >
+            Logos
+          </a>
+          , a decentralized tech stack &amp; movement to rebuild society.
+        </Text>
+        <br />
         <Text>
           I lead{' '}
           <a
@@ -45,7 +52,8 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
         </Text>
         <br />
         <Text>
-        <strong>I&apos;ve been building something new for the past few months. More details on that coming soon.</strong>
+          Based in Prague. Most likely to be found at a shisha lounge or on the
+          crypto hackathon circuit.
         </Text>
 
         <H3 className="mb-4 mt-8">/startups</H3>
@@ -195,6 +203,20 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
         </div>
       </div>
 
+      {/* Open source */}
+      <div className="mt-12">
+        <H4 className="mb-3">open-source</H4>
+        <Text className="mb-6">
+          I&apos;ve been contributing OS code and research occasionally. Active
+          projects here.
+        </Text>
+        <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))] gap-4">
+          {openSourceProjects.map((project) => (
+            <ProjectCard key={project.title} project={project} />
+          ))}
+        </div>
+      </div>
+
       {/* Projects */}
       <div className="mt-12">
         <H4 className="mb-3">hackathon projects</H4>
@@ -236,6 +258,7 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
           </Link>
         </div>
       </div>
+
     </>
   )
 }

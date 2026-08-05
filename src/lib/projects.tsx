@@ -1,4 +1,4 @@
-
+import ChatIcon from '@/icons/chat.svg'
 
 export interface Project {
   title: string
@@ -13,6 +13,7 @@ export interface Project {
   current?: boolean
   hackathon?: boolean
   governance?: boolean
+  openSource?: boolean
 }
 
 export const projects: Project[] = [
@@ -25,6 +26,18 @@ export const projects: Project[] = [
     url: 'https://www.recursive.so/',
     logo: '/recursive.png',
     current: true,
+  },
+  {
+    title: 'Lortnoc Tahc',
+    description:
+      'encrypted messaging on unencrypted platforms. a browser extension that hides real messages inside ordinary Telegram chats using steganography.',
+    year: '🟢 July 2026',
+    tags: [],
+    url: 'https://www.lortnoctahc.com/',
+    logo: ChatIcon,
+    hackathon: true,
+    showOnHomepageHack: false,
+    openSource: true,
   },
   {
     title: 'ReplyGuy.ai, Co-founder',

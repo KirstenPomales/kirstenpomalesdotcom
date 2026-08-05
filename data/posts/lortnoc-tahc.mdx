@@ -1,0 +1,150 @@
+---
+title: "lortnoc tahc: encrypted messaging on unencrypted platforms"
+date: 2026-08-05
+excerpt: The EU passed the Chat Control Act. So at ETHGlobal Lisbon we built Lortnoc Tahc - chat control spelled backwards. It hides real messages inside ordinary Telegram chats using steganography. Everyone else sees small talk.
+---
+
+A few weeks ago, the EU passed the Chat Control Act.
+
+It enables tech companies and governments to scan your messages.
+
+I've written before that my most fundamental belief is that humans deserve to be sovereign. Financial sovereignty. Work sovereignty. Geographic sovereignty. But underneath all three of those is something more basic: **the ability to say something to another person without a third party listening.**
+
+Without private speech, you can't organize. You can't dissent. You can't coordinate a business deal, a protest, or a move across a border. Every other freedom is downstream of this one.
+
+So at [ETHGlobal](https://ethglobal.com/) Lisbon, my friends at [Kilian Solutions](https://kilian.solutions) and I built **Lortnoc Tahc**.
+
+That's *chat control* spelled backwards.
+
+[I posted about it here.](https://x.com/kirstenrpomales/status/2082465368803627082)
+
+## the obvious answer is the wrong answer
+
+When surveillance gets bad, our industry has one reflex: build a new platform.
+
+Build the encrypted alternative. Build the sovereign, censorship-resistant, decentralized messenger. Ship it. Tell everyone to switch.
+
+We've been doing this for a decade. **It doesn't work.**
+
+Not because the technology is bad — some of it is genuinely excellent — but because we keep losing to the same thing we spend all day talking about: network effects.
+
+Your mom is on Telegram. Your group chat is on Telegram. Your business contacts, your hackathon team, the person selling you a used bike. The value of a messaging app is not its cryptography. It's the people already inside it.
+
+Asking someone to leave that behind isn't a technical request. It's a social one, and it's expensive. You're not asking them to install an app. You're asking them to convince forty other people to install an app.
+
+I've spent years building marketplaces and protocols. Bootstrapping a network from zero is the hardest problem in the business. I'm not going to pretend we can do it every time a bad law passes.
+
+So we asked a different question.
+
+**What if you didn't have to leave?**
+
+## hide in plain sight
+
+Lortnoc Tahc is a browser extension. You install it, you keep using Telegram exactly as you always have.
+
+When you type a message in a chat you've toggled on, the extension encrypts it and then replaces it with **innocuous small talk** before it sends.
+
+You type:
+
+> Hey, I'm gonna send you some crypto for our business deal
+
+Telegram sends, stores, and scans:
+
+> Hey let's grab coffee today. The sun is out.
+
+Your friend — who also has the extension — sees your original message, decoded inline in the chat bubble.
+
+Everyone else sees two people making weekend plans.
+
+That's steganography: not making a message unreadable, but making it **invisible as a message at all**.
+
+## why steganography is the important part
+
+I want to dwell on this, because I think it's the piece people underrate.
+
+Encryption protects the *contents* of a message. It does not hide the *existence* of one. Under a surveillance regime, that distinction is everything.
+
+A blob of ciphertext is a flare. It announces: *something is being hidden here.* It marks you as a person with something to hide, on a platform where almost nobody else is hiding anything. In a world where scanning is mandatory and unencrypted platforms are the default, being the one encrypted user is not privacy. It's a targeting signal.
+
+Steganography removes the signal entirely. There is no anomaly to flag. The message doesn't look encrypted, because it doesn't look like anything — it looks like your friend talking about the weather.
+
+This is the difference between **"they can't read it"** and **"they don't know there's anything to read."**
+
+Chat Control is built to scan message contents at scale. It has nothing to say about two people discussing coffee.
+
+## how it actually works
+
+Here's the technical side. We built this in under 36 hours, so consider this a working demo rather than a finished product.
+
+### the codec
+
+The steganography runs on a **deterministic GPT-2 model** (HuggingFace transformers, CPU) driving an arithmetic and block coder.
+
+The reason you need a language model here — and the reason this is harder than it sounds — is that reversible steganography requires **full-vocabulary log probabilities**. The encoder walks the model's probability distribution over every possible next token and uses your ciphertext bits to choose the path through it. The decoder replays the identical walk in reverse to recover those bits.
+
+That only works if both ends see byte-identical probabilities. Any nondeterminism — different hardware, a different model build, sampling temperature above zero — and the walk diverges and the message is lost. So the model runs greedy, at `temp=0`, on a single warm hosted instance that both extensions call.
+
+The output is real English sentences, generated by a language model, that happen to encode your ciphertext exactly.
+
+### the crypto
+
+Encryption is **AES-SIV** (`@noble/ciphers`), performed entirely in the browser.
+
+The design invariant we cared most about: **plaintext and keys never leave the page.** The content script does the encryption locally. The hosted codec only ever sees ciphertext. It cannot read your messages even if you don't trust it — and you shouldn't trust it.
+
+My favorite detail in the whole build is what we do with the authentication tag. AES-SIV produces an auth tag to verify integrity. We use it as a **steganography detector**.
+
+Every inbound message gets a decode attempt. A valid tag means the bubble is ours, so we render the decoded text inline. An invalid tag means it's just an ordinary message, so we leave it completely alone.
+
+No metadata. No markers. No special prefix announcing "this one is secret." The cryptography itself tells you which messages are yours, which means there is nothing for an observer to pattern-match on.
+
+### key exchange
+
+Symmetric keys are never transmitted. Both parties send **X25519 ephemeral public keys encoded as cover text** — through Telegram, as more ordinary-looking chatter — and derive the shared conversation key via ECDH on their own machines.
+
+The handshake looks like small talk too.
+
+### why an extension, not a bot
+
+We run as a content script inside **your own Telegram Web session**. No bot account, no Telegram Bot API, no special permissions, no new app.
+
+This matters for a boring but real reason: bot APIs come with terms of service, and terms of service are a chokepoint. A tool that depends on a platform's permission can have that permission revoked. Reading and writing the page you already have open cannot be taken away by a policy change.
+
+It also means there's no server holding your conversations, because there's no server in the conversation at all.
+
+### fail closed
+
+If anything breaks — codec unreachable, a failed decode, Telegram normalizing the text out from under us — you see the original cover text. Never a crash, never a leak.
+
+**It fails closed. Nothing leaks, but it does break.** That's the honest tradeoff of a 36-hour build, and we'd rather it break loudly than leak quietly.
+
+### the onchain layer
+
+We also wired up the parts that make this into a real identity and storage system rather than a party trick:
+
+- **0G** — sealed cover-text selection, plus anonymous membership using Semaphore `join()` with nullifier commitments
+- **ENS v2 (Sepolia)** — per-user identity via VerifiableFactory and PermissionedResolver proxies, with per-record write delegation. A gateway can rotate your inbox pointer and touch nothing else — not your pubkey, not your vault — and you can revoke it in one transaction
+- **Sui, Walrus, and Seal** — an encrypted vault with Quilt batching and on-chain access policies
+- **LI.FI** — bridging, so onboarding is two transactions instead of a scavenger hunt
+
+We came out of the weekend as a **finalist**, and took the **0G prize for Best Infrastructure & Tooling**.
+
+## where this goes
+
+We're productionizing it now with a volunteer team. It's open source. It is currently a dev-mode extension, which means you install it manually and it doesn't auto-update, and it will absolutely still break on you.
+
+But the core idea is sound, and I think it generalizes far past Telegram.
+
+**The lesson I keep coming back to is this:** we don't have to win the platform war to win the privacy war. We spent ten years trying to move people to better platforms and mostly failed, because network effects are real and users are not stupid for staying where their friends are.
+
+We can meet people where they already are, and make the surveillance layer irrelevant underneath them.
+
+Laws that mandate scanning assume there is something legible to scan. That assumption is a technical claim. And technical claims can be answered with technology.
+
+You can see the project at [lortnoctahc.com](https://www.lortnoctahc.com/), and the full build on the [ETHGlobal showcase](https://ethglobal.com/showcase/lortnoc-tahc-y1d3j).
+
+If you want to help productionize it, come find me.
+
+For freedom,
+
+Kirsten

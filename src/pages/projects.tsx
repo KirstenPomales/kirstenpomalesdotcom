@@ -11,7 +11,10 @@ const title = 'Projects – Kirsten Pomales'
 const description = 'Projects I have worked on.'
 
 const ProjectsPage = () => {
-  const personalProjects = projects.filter((project) => !project.governance)
+  const openSourceProjects = projects.filter((project) => project.openSource)
+  const personalProjects = projects.filter(
+    (project) => !project.governance && !project.openSource
+  )
   const governanceProjects = projects.filter((project) => project.governance)
 
   return (
@@ -26,6 +29,18 @@ const ProjectsPage = () => {
           description,
         }}
       />
+      <H4 className="mt-6 mb-3">open-source</H4>
+      <Text className="mb-5">
+        I&apos;ve been contributing OS code and research occasionally. Active
+        projects here.
+      </Text>
+
+      <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))] gap-4">
+        {openSourceProjects.map((project) => (
+          <ProjectCard key={project.title} project={project} />
+        ))}
+      </div>
+
       <H4 className="mt-6 mb-3">startups</H4>
       <Text className="mb-5">
         I&apos;ve been building software startups since I was 16. I&apos;ve
