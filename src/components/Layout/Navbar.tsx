@@ -3,8 +3,8 @@ import { useRouter } from 'next/router'
 import cx from 'classnames'
 
 import ThemeToggler from '@/components/ThemeToggler'
-import Container from './Container'
 import CloverCarousel from './CloverCarousel'
+import Container from './Container'
 
 const Navbar = () => {
   const router = useRouter()

@@ -14,7 +14,7 @@ export default async function handler(
     })
 
     return res.status(200).json({ total: totalViews._sum.views })
-  } catch (err) {
+  } catch {
     return res.status(500).json('Something went wrong')
   }
 }

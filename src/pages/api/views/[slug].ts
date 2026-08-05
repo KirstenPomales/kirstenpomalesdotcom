@@ -41,7 +41,7 @@ export default async function handler(
 
       return res.status(200).json({ views: post.views })
     }
-  } catch (err) {
+  } catch {
     return res.status(500).json('Something went wrong')
   }
 }

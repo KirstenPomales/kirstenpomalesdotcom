@@ -34,7 +34,7 @@ const MDXComponents = {
     </div>
   ),
   a: CustomLink,
-  h3: ({ children, ...props }: { children: ReactNode }) => (
+  h3: ({ children, ...props }: { children?: ReactNode }) => (
     <H4 {...props}>{children}</H4>
   ),
 }
