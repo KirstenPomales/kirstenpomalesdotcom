@@ -4,7 +4,6 @@ import { NextSeo } from 'next-seo'
 import { Post } from 'contentlayer/generated'
 
 import BlogPostPreview from '@/components/BlogPost/BlogPostPreview'
-import { H4, Text } from '@/components/Text'
 import { getAllPosts } from '@/lib/posts'
 
 const url = 'https://kirstenpomales.com/blog'
@@ -30,10 +29,14 @@ const BlogPage = ({ posts }: { posts: Post[] }) => {
           description,
         }}
       />
-      <H4 className="mt-6 mb-3">writing</H4>
-      <Text className="mb-8">
-        I write occasionally about tech, startups, and other things.
-      </Text>
+      <header className="hero">
+        <h1 className="display">
+          <span className="hl">writing</span>
+        </h1>
+        <p className="sticker hero__head !bg-mint">
+          I write occasionally about tech, startups, and other things.
+        </p>
+      </header>
       {/* <div className="relative w-full mb-12">
         <input
           spellCheck="false"
@@ -53,11 +56,13 @@ const BlogPage = ({ posts }: { posts: Post[] }) => {
         </svg>
       </div> */}
 
-      <div className="flex flex-col gap-8">
-        {posts.map((post) => (
-          <BlogPostPreview key={post._id} post={post} />
-        ))}
-      </div>
+      <section className="section section--dots !pt-0" aria-label="Posts">
+        <div className="posts">
+          {posts.map((post) => (
+            <BlogPostPreview key={post._id} post={post} />
+          ))}
+        </div>
+      </section>
     </>
   )
 }

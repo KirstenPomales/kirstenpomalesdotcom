@@ -7,16 +7,7 @@ interface ContainerProps {
 }
 
 const Container = ({ children, className }: ContainerProps) => {
-  return (
-    <div
-      className={classNames(
-        'w-full max-w-3xl mx-auto px-6 md:px-10',
-        className,
-      )}
-    >
-      {children}
-    </div>
-  )
+  return <div className={classNames('wrap', className)}>{children}</div>
 }
 
 export default Container

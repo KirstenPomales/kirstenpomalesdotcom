@@ -1,5 +1,6 @@
 const { fontFamily } = require('tailwindcss/defaultTheme')
 
+// Design tokens live in src/styles/global.css (:root). Tailwind only maps them.
 module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx}',
@@ -11,79 +12,30 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        main: ['Nunito Sans', ...fontFamily.sans],
-        secondary: ['Inter', ...fontFamily.sans],
+        main: ['Space Grotesk', ...fontFamily.sans],
       },
       colors: {
-        primary: 'var(--primary)',
-        secondary: 'var(--secondary)',
-        'text-primary': 'var(--text-primary)',
-        'text-secondary': 'var(--text-secondary)',
-        'base-100': 'var(--base-100)',
-        'base-200': 'var(--base-200)',
+        butter: 'var(--butter)',
+        ink: 'var(--ink)',
+        tomato: 'var(--tomato)',
+        pink: 'var(--pink)',
+        mint: 'var(--mint)',
+        lemon: 'var(--lemon)',
+        paper: 'var(--paper)',
+        bg: 'var(--bg)',
+        fg: 'var(--fg)',
+        line: 'var(--line)',
       },
-      animation: {
-        scroll: 'scroll 15s linear infinite',
-      },
-      keyframes: {
-        scroll: {
-          '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-50%)' },
-        },
-      },
-      typography: (theme) => ({
+      typography: {
         DEFAULT: {
           css: {
-            color: theme('colors.gray.700'),
-            a: {
-              // links color
-              color: theme('colors.blue.500'),
-              '&:hover': {
-                color: theme('colors.blue.700'),
-              },
-            },
             'code::before': false, // hide backticks from inline code
             'code::after': false,
             'blockquote p:first-of-type::before': false, // remove quotation marks in blockquotes
             'blockquote p:last-of-type::after': false,
           },
         },
-        dark: {
-          css: {
-            color: theme('colors.gray.200'),
-            a: {
-              color: theme('colors.blue.400'),
-              '&:hover': {
-                color: theme('colors.blue.600'),
-              },
-            },
-            blockquote: {
-              borderLeftColor: theme('colors.gray.600'),
-              color: theme('colors.gray.300'),
-            },
-            'h1,h2,h3,h4,strong': {
-              color: 'white',
-            },
-            hr: { borderColor: theme('colors.gray.700') },
-            ol: {
-              // list dots color
-              li: {
-                '&:before': { color: theme('colors.gray.500') },
-              },
-            },
-            ul: {
-              li: {
-                '&:before': { backgroundColor: theme('colors.gray.500') },
-              },
-            },
-          },
-        },
-      }),
-    },
-  },
-  variants: {
-    extend: {
-      typography: ['dark'],
+      },
     },
   },
   plugins: [require('@tailwindcss/typography')],

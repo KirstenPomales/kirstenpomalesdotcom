@@ -1,264 +1,291 @@
-
 import Link from 'next/link'
 import { Post } from 'contentlayer/generated'
 
 import BlogPostPreview from '@/components/BlogPost/BlogPostPreview'
 import ProjectCard from '@/components/ProjectCard'
-import { H1, H3, H4, Text } from '@/components/Text'
+import { ExtLink, Section, SectionHead, Text } from '@/components/Text'
 import { getLatestPosts } from '@/lib/posts'
 import { projects } from '@/lib/projects'
 
 const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
   const filteredProjects = projects.filter((project) => project.showOnHomepage)
 
-  
   const current = projects.filter((project) => project.current)
 
   const openSourceProjects = projects.filter((project) => project.openSource)
 
   return (
     <>
-      {/* Bio */}
-      <div className="mt-6">
-        <H1 className="mb-6">hey, i&apos;m kirsten!</H1>
-        <H4 className="mb-6">i do ai, decentralized systems, and sometimes lobbying.</H4>
-        
-        
-        <Text>
-          I lead the Movement team at{' '}
-          <a
-            href="https://logos.co/movement"
-            target="_blank"
-            className="underline"
-            rel="noreferrer"
-          >
-            Logos
-          </a>
-          , a decentralized tech stack &amp; movement to rebuild society.
-        </Text>
-        <br />
-        <Text>
-          I lead{' '}
-          <a
-            href="https://recursive.so/"
-            target="_blank"
-            className="underline"
-            rel="noreferrer"
-          >
-            Recursive
-          </a>
-          , the software development studio behind your favorite crypto and AI
-          startups.
-        </Text>
-        <br />
-        <Text>
-          Based in Prague. Most likely to be found at a shisha lounge or on the
-          crypto hackathon circuit.
-        </Text>
+      {/* Hero + growth mode (signature moment) */}
+      <section className="hero" aria-labelledby="hero-title">
+        <h1 className="display" id="hero-title">
+          <span className="inline-block w-full">hey, i&apos;m</span>{' '}
+          <span className="hl mt-[0.14em]">kirsten!</span>
+        </h1>
+        <h4 className="sticker hero__head">
+          i do ai, decentralized systems, and sometimes lobbying.
+        </h4>
 
-        <H3 className="mb-4 mt-8">/startups</H3>
-        <Text>
-          I&apos;m a 2x venture backed founder who loves {' '}
-          <a
-            href="https://medium.com/talentlayer/the-great-evolution-of-the-marketplace-market-networks-unbundling-and-user-owned-networks-b2ab9a086ec"
-            target="_blank"
-            className="underline"
-            rel="noreferrer"
-          >
-            multi-sided marketplaces
-          </a> decentralized systems, and AI.
-        </Text>
-        <br />
-        <Text>
-          I&apos;ve been{' '}
-          <Link href="/projects">
-            <a className="underline">building software startups</a>
-          </Link>{' '}
-          since I was 16. I&apos;ve tried a lot, failed a lot, and learned a
-          lot.
-        </Text>
-        <br />
-        <Text>Dropout and self-taught dev.</Text>
+        <div className="hero__grid">
+          <div className="hero__intro">
+            <Text>
+              I lead the Movement team at{' '}
+              <ExtLink href="https://logos.co/movement">Logos</ExtLink>, where
+              we&apos;re building a parallel society operating on a sovereign
+              tech stack.
+            </Text>
+            <Text>
+              I lead <ExtLink href="https://recursive.so/">Recursive</ExtLink>,
+              a software development studio working with clients like Dragonfly
+              Capital, EthersJS, and others.
+            </Text>
+            <Text>
+              Based in Prague. Most likely to be found at a shisha lounge or on
+              the crypto hackathon circuit.
+            </Text>
+          </div>
 
-        <H3 className="mb-4 mt-8">/decentralized tech</H3>
-        <Text>
-          I&apos;ve spent the past 8+ years in crypto, building VC
-          backed protocol networks, enterprise blockchain systems, & open-source
-          software communities with groups like the IEEE, European Comission, and others. Read my work bio{' '}
-          <a
-            href="https://www.recursive.so/leadership#kirsten"
-            target="_blank"
-            className="underline"
-            rel="noreferrer"
-          >
-            here
-          </a>
-          .
-        </Text>
-        <br />
-        <Text>
-          I ran a 200 person IEEE standards group on Blockchain Governance from 2019 to 2021.{' '}
-          <a
-            href="https://www.youtube.com/channel/UCgyT_7we6YGDVQJDKZD6EBA"
-            target="_blank"
-            className="underline"
-            rel="noreferrer"
-          >
-            You can listen to my lectures
-          </a>{' '}
-          on blockchain governance and ecosystem design, hosted by INATBA
-          (European Commission blockchain association), The IEEE, Fedex
-          Institute of Technology, Hyperledger Foundation and others. I also
-          consulted multiple enterprise blockchain projects during that time.
-        </Text>
-        <br />
-        <Text>
-          My 1st crypto transaction was buying a pocket knife with $DASH during{' '}
-          <a
-            href="https://en.wikipedia.org/wiki/Porcupine_Freedom_Festival"
-            target="_blank"
-            className="underline"
-            rel="noreferrer"
-          >
-            PorcFest
-          </a>{' '}
-          2018.
-        </Text>
-
-        <H3 className="mb-4 mt-8">/lobbying & government relations</H3>
-        <Text>
-          Before getting into tech, I spent 5+ years working in US politics on free-market issues like promoting innovation, reducing corporate cronyism, tax reform, criminal justice reform, immigration, and more. <strong>My work has impacted the passage of dozens of bills on the state and federal level.</strong>
-        </Text>
-        <br />
-        <Text>
-          Teams I worked with: Senator Rob Portman, Americans for Prosperity, American Petroleum Institute, Concerned Veterans of America, Libre Initiative, and others.
-        </Text>
-        <br />
-        <Text>
-          After moving to Europe in 2022, I&apos;ve secured my teams Certificate of Excellence in Innovation and major European Union grant funding.
-        </Text>
-        <br />
-        <Text>
-          <strong>Currently working on some new innovation initiatives in the US and EU. More on that soon.</strong>
-        </Text>
-
-        <H3 className="mb-4 mt-8">/personal stuff</H3>
-
-        <Text>
-          My most fundamental belief is that humans are autonomous; that is, they are
-          able to take action to impact their environment and circumstances.
-          Anything can be done by anyone with enough willpower and grit. We make
-          our own reality. When we realize this, we are free.
-        </Text>
-        <br />
-        <Text>
-          I&apos;m a{' '}
-          <a
-            href="https://nakamotoinstitute.org/crypto-anarchist-manifesto/"
-            target="_blank"
-            className="underline"
-            rel="noreferrer"
-          >
-            Cryptoanarchist
-          </a>
-          . The future is decentralized, democratized, and censorship resistant.
-        </Text>
-        <br />
-        <Text>Unabashed techno-optimist.</Text>
-        <br />
-        <Text>Above all, I&apos;m building a tribe.</Text>
-      </div>
-
-      {/* Projects */}
-      <div className="mt-12">
-        <H4 className="mb-3">growth mode</H4>
-        <Text className="mb-6">
-          I&apos;m building a few projects at the moment. Check them out here!
-        </Text>
-        <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))] gap-4">
-          {current.map((project) => (
-            <ProjectCard key={project.title} project={project} />
-          ))}
+          <section className="growth" aria-labelledby="growth-title">
+            <h2 id="growth-title">growth mode</h2>
+            <Text>
+              I&apos;m building a few projects at the moment. Check them out
+              here!
+            </Text>
+            <div className="growth__grid">
+              {current.map((project) => (
+                <ProjectCard key={project.title} project={project} row />
+              ))}
+            </div>
+          </section>
         </div>
-      </div>
+      </section>
 
-      {/* Projects */}
-      <div className="mt-12">
-        <H4 className="mb-3">prior startups</H4>
-        <Text className="mb-6">
-          I&apos;ve built multiple VC-backed, revenue generating startups like
-          marketplaces, data infra, and more.
-        </Text>
-        <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))] gap-4">
+      {/* /startups */}
+      <Section num="01" labelledBy="startups-title">
+        <SectionHead num="01" id="startups-title" title="/startups" />
+        <div className="grid12 stagger">
+          <div className="panel">
+            <Text>
+              I&apos;m a 2x venture backed founder who loves{' '}
+              <ExtLink href="https://medium.com/talentlayer/the-great-evolution-of-the-marketplace-market-networks-unbundling-and-user-owned-networks-b2ab9a086ec">
+                multi-sided marketplaces
+              </ExtLink>{' '}
+              decentralized systems, and AI.
+            </Text>
+          </div>
+          <div className="panel panel--mint">
+            <Text>
+              I&apos;ve been{' '}
+              <Link href="/projects">
+                <a className="ilink">building software startups</a>
+              </Link>{' '}
+              since I was 16. I&apos;ve tried a lot, failed a lot, and learned a
+              lot.
+            </Text>
+          </div>
+          <div className="panel panel--butter">
+            <Text>Dropout and self-taught dev.</Text>
+          </div>
+        </div>
+      </Section>
+
+      {/* /decentralized tech */}
+      <Section num="02" labelledBy="tech-title">
+        <SectionHead num="02" id="tech-title" title="/decentralized tech" />
+        <div className="grid12 stagger">
+          <div className="panel panel--sm lift">
+            <Text>
+              I&apos;ve spent the past 8+ years in crypto, building VC backed
+              protocol networks, enterprise blockchain systems, &amp;
+              open-source software communities with groups like the IEEE,
+              European Comission, and others. Read my work bio{' '}
+              <ExtLink href="https://www.recursive.so/leadership#kirsten">
+                here
+              </ExtLink>
+              .
+            </Text>
+          </div>
+          <div className="panel panel--sm panel--mint lift">
+            <Text>
+              I ran a 200 person IEEE standards group on Blockchain Governance
+              from 2019 to 2021.{' '}
+              <ExtLink href="https://www.youtube.com/channel/UCgyT_7we6YGDVQJDKZD6EBA">
+                You can listen to my lectures
+              </ExtLink>{' '}
+              on blockchain governance and ecosystem design, hosted by INATBA
+              (European Commission blockchain association), The IEEE, Fedex
+              Institute of Technology, Hyperledger Foundation and others. I also
+              consulted multiple enterprise blockchain projects during that
+              time.
+            </Text>
+          </div>
+          <div className="panel panel--sm panel--butter lift">
+            <Text>
+              My 1st crypto transaction was buying a pocket knife with $DASH
+              during{' '}
+              <ExtLink href="https://en.wikipedia.org/wiki/Porcupine_Freedom_Festival">
+                PorcFest
+              </ExtLink>{' '}
+              2018.
+            </Text>
+          </div>
+        </div>
+      </Section>
+
+      {/* /lobbying & government relations */}
+      <Section num="03" labelledBy="lobby-title" dots={false}>
+        <div className="field">
+          <SectionHead
+            num="03"
+            id="lobby-title"
+            title="/lobbying & government relations"
+          />
+          <div className="split">
+            <div className="panel panel--butter panel--sm">
+              <Text className="big">
+                Before getting into tech, I spent 5+ years working in US
+                politics on free-market issues like promoting innovation,
+                reducing corporate cronyism, tax reform, criminal justice
+                reform, immigration, and more.{' '}
+                <strong>
+                  My work has impacted the passage of dozens of bills on the
+                  state and federal level.
+                </strong>
+              </Text>
+            </div>
+            <div className="stack">
+              <Text>
+                Teams I worked with: Senator Rob Portman, Americans for
+                Prosperity, American Petroleum Institute, Concerned Veterans of
+                America, Libre Initiative, and others.
+              </Text>
+              <Text>
+                After moving to Europe in 2022, I&apos;ve secured my teams
+                Certificate of Excellence in Innovation and major European
+                Union grant funding.
+              </Text>
+              <Text>
+                <strong>
+                  Currently working on some new innovation initiatives in the
+                  US and EU. More on that soon.
+                </strong>
+              </Text>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* /personal stuff */}
+      <Section num="04" labelledBy="personal-title">
+        <SectionHead num="04" id="personal-title" title="/personal stuff" />
+        <div className="grid12 personal">
+          <div className="panel panel--sm panel--mint lift">
+            <Text className="personal__long">
+              My most fundamental belief is that humans are autonomous; that
+              is, they are able to take action to impact their environment and
+              circumstances. Anything can be done by anyone with enough
+              willpower and grit. We make our own reality. When we realize
+              this, we are free.
+            </Text>
+          </div>
+          <div className="panel panel--sm panel--butter lift">
+            <Text>
+              I&apos;m a{' '}
+              <ExtLink href="https://nakamotoinstitute.org/crypto-anarchist-manifesto/">
+                Cryptoanarchist
+              </ExtLink>
+              . The future is decentralized, democratized, and censorship
+              resistant.
+            </Text>
+          </div>
+          <div className="panel panel--sm lift tilt-r">
+            <Text>Unabashed techno-optimist.</Text>
+          </div>
+          <div className="panel panel--sm panel--tomato lift tilt-l">
+            <Text>Above all, I&apos;m building a tribe.</Text>
+          </div>
+        </div>
+      </Section>
+
+      {/* prior startups */}
+      <Section num="05" labelledBy="prior-title">
+        <SectionHead
+          num="05"
+          id="prior-title"
+          title="prior startups"
+          intro="I've built multiple VC-backed, revenue generating startups like marketplaces, data infra, and more."
+        />
+        <div className="cards">
           {filteredProjects.map((project) => (
             <ProjectCard key={project.title} project={project} />
           ))}
         </div>
-        <div className="mt-6 flex justify-center">
+        <div className="cta-row">
           <Link href="/projects">
-            <a className="text-primary text-center bg-base-200 rounded-lg px-4 py-2">
-              see more
-            </a>
+            <a className="btn btn--tomato">see more</a>
           </Link>
         </div>
-      </div>
+      </Section>
 
-      {/* Open source */}
-      <div className="mt-12">
-        <H4 className="mb-3">open-source</H4>
-        <Text className="mb-6">
-          I&apos;ve been contributing OS code and research occasionally. Active
-          projects here.
-        </Text>
-        <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))] gap-4">
+      {/* open-source */}
+      <Section num="06" labelledBy="oss-title">
+        <SectionHead
+          num="06"
+          id="oss-title"
+          title="open-source"
+          intro="I've been contributing OS code and research occasionally. Active projects here."
+        />
+        <div className="cards">
           {openSourceProjects.map((project) => (
             <ProjectCard key={project.title} project={project} />
           ))}
         </div>
-      </div>
+      </Section>
 
-      {/* Projects */}
-      <div className="mt-12">
-        <H4 className="mb-3">hackathon projects</H4>
-        <Text className="mb-6">
-          I&apos;ve been to 15+ hackathons in the past two years. Most of the
-          time, I&apos;m there building work tech proofs of concepts. I&apos;ve
-          won prizes at the past 6 that I&apos;ve hacked at.
-        </Text>
-        {/* <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))] gap-4">
-          {filteredProjectsHack.map((project) => (
-            <ProjectCard key={project.title} project={project} />
-          ))}
-        </div> */}
-        <div className="mt-6 flex justify-center">
-          <a href="https://linktr.ee/kphacks" target="_blank" rel="noreferrer">
-            <a className="text-primary text-center bg-base-200 rounded-lg px-4 py-2">
-              view some hacks
-            </a>
+      {/* hackathon projects */}
+      <Section num="07" labelledBy="hack-title" dots={false}>
+        <div className="panel panel--lemon hack">
+          <span className="index-no" aria-hidden="true">
+            07
+          </span>
+          <h2 id="hack-title">
+            hackathon projects
+          </h2>
+          <Text>
+            I&apos;ve been to 15+ hackathons in the past two years. Most of the
+            time, I&apos;m there building work tech proofs of concepts.
+            I&apos;ve won prizes at the past 6 that I&apos;ve hacked at.
+          </Text>
+          <a
+            className="btn btn--tomato"
+            href="https://linktr.ee/kphacks"
+            target="_blank"
+            rel="noreferrer"
+          >
+            view some hacks
           </a>
         </div>
-      </div>
+      </Section>
 
-      {/* Posts */}
-      <div className="mt-12">
-        <H4 className="mb-3">latest writing</H4>
-        <Text className="mb-6">
-          I write occasionally about tech, startups, and the future of work.
-        </Text>
-        <div className="flex flex-col gap-8">
+      {/* latest writing */}
+      <Section num="08" labelledBy="writing-title">
+        <SectionHead
+          num="08"
+          id="writing-title"
+          title="latest writing"
+          intro="I write occasionally about tech, startups, and the future of work."
+        />
+        <div className="posts">
           {latestPosts.map((post) => (
             <BlogPostPreview key={post.slug} post={post} />
           ))}
         </div>
-        <div className="mt-6 flex justify-center">
-          <Link href="/blog" target="_blank">
-            <a className="text-primary text-center bg-base-200 rounded-lg px-4 py-2">
-              read more
-            </a>
+        <div className="cta-row">
+          <Link href="/blog">
+            <a className="btn">read more</a>
           </Link>
         </div>
-      </div>
-
+      </Section>
     </>
   )
 }
@@ -273,4 +300,3 @@ export async function getStaticProps() {
     },
   }
 }
-

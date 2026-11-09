@@ -24,14 +24,10 @@ interface ImageComponentProps extends ImageProps {
 
 const MDXComponents = {
   Image: ({ caption, src, alt, ...props }: ImageComponentProps) => (
-    <div className="flex flex-col items-center">
+    <figure className="media-frame flex flex-col items-center">
       <Image src={src} alt={alt} {...props} />
-      {caption && (
-        <p className="text-[12px] text-text-secondary text-opacity-60">
-          {caption}
-        </p>
-      )}
-    </div>
+      {caption && <figcaption className="media-caption">{caption}</figcaption>}
+    </figure>
   ),
   a: CustomLink,
   h3: ({ children, ...props }: { children?: ReactNode }) => (

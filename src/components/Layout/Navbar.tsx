@@ -1,53 +1,34 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import cx from 'classnames'
 
 import ThemeToggler from '@/components/ThemeToggler'
 import CloverCarousel from './CloverCarousel'
 import Container from './Container'
+
+const links = [
+  { href: '/', label: 'home' },
+  { href: '/projects', label: 'projects' },
+  { href: '/blog', label: 'blog' },
+]
 
 const Navbar = () => {
   const router = useRouter()
 
   return (
     <header>
-      <div className="py-12">
-        <Container className="flex justify-between items-center">
-          <nav className="flex items-center gap-8">
-            <Link href="/">
-              <a
-                className={cx(
-                  'font-medium',
-                  router.pathname === '/' ? 'underline' : 'text-text-secondary',
-                )}
-              >
-                home
-              </a>
-            </Link>
-            <Link href="/projects">
-              <a
-                className={cx(
-                  'font-medium',
-                  router.pathname === '/projects'
-                    ? 'underline'
-                    : 'text-text-secondary',
-                )}
-              >
-                projects
-              </a>
-            </Link>
-            <Link href="/blog">
-              <a
-                className={cx(
-                  'font-medium',
-                  router.pathname === '/blog'
-                    ? 'underline'
-                    : 'text-text-secondary',
-                )}
-              >
-                blog
-              </a>
-            </Link>
+      <div className="site-head">
+        <Container>
+          <nav className="nav" aria-label="Primary">
+            {links.map(({ href, label }) => (
+              <Link key={href} href={href}>
+                <a
+                  className="nav-link"
+                  aria-current={router.pathname === href ? 'page' : undefined}
+                >
+                  {label}
+                </a>
+              </Link>
+            ))}
           </nav>
           <ThemeToggler />
         </Container>

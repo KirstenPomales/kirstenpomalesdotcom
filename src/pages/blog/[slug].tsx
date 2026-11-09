@@ -38,15 +38,18 @@ const BlogPostPage = ({ post }: { post: Post }) => {
   return (
     <>
       <BlogSeo post={post} />
-      <article>
-        <header className="mt-6 mb-10">
-          <H1 className="mb-3">{post.title}</H1>
-          <p className="mb-1 text-text-secondary">
-            <time dateTime={post.date}>{formatDate(post.date)}</time> •{' '}
-            {post.readingTime}
+      <article className="article">
+        <header className="article__head">
+          <H1>{post.title}</H1>
+          <p className="article__meta">
+            <time className="chip" dateTime={post.date}>
+              {formatDate(post.date)}
+            </time>
+            <span className="sr-only"> • </span>
+            <span className="chip chip--paper">{post.readingTime}</span>
           </p>
         </header>
-        <div className="prose dark:prose-dark max-w-none font-secondary">
+        <div className="article__body prose max-w-none">
           <MDXContent components={MDXComponents} />
         </div>
       </article>

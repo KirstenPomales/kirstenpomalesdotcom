@@ -1,25 +1,18 @@
-const CloverCarousel = () => {
-  // Create an array of clover images - we'll duplicate them for seamless looping
-  const cloverImages = Array.from({ length: 30 }, (_, i) => (
-    <img
-      key={i}
-      src="/clover.svg"
-      alt="Clover"
-      className="h-8 w-8 object-contain flex-shrink-0"
-    />
-  ))
+const CloverSet = ({ hidden }: { hidden?: boolean }) => (
+  <div className="marquee__set" aria-hidden={hidden}>
+    {Array.from({ length: 30 }, (_, i) => (
+      <img key={i} src="/clover.svg" alt="Clover" width={32} height={32} />
+    ))}
+  </div>
+)
 
+const CloverCarousel = () => {
   return (
-    <div className="w-full overflow-hidden bg-base-100 pt-2 pb-6">
-      <div className="flex animate-scroll whitespace-nowrap">
-        {/* First set of images */}
-        <div className="flex items-center gap-4">
-          {cloverImages}
-        </div>
+    <div className="marquee">
+      <div className="marquee__track">
         {/* Duplicate set for seamless loop */}
-        <div className="flex items-center gap-4">
-          {cloverImages}
-        </div>
+        <CloverSet />
+        <CloverSet hidden />
       </div>
     </div>
   )

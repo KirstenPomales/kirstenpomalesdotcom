@@ -2,19 +2,20 @@ import Link from 'next/link'
 import { Post } from 'contentlayer/generated'
 
 import { formatDate } from '@/utils/dates'
-import { H4, Text } from '../Text'
 
 const BlogPostPreview = ({ post }: { post: Post }) => {
   return (
     <Link href={`/blog/${post.slug}`}>
-      <a>
+      <a className="post-row">
+        <div className="post-row__meta">
+          <time className="chip" dateTime={post.date}>
+            {formatDate(post.date)}
+          </time>
+          <span className="chip chip--paper">{post.readingTime}</span>
+        </div>
         <article>
-          <H4 className="mb-1.5">{post.title}</H4>
-          <p className="mb-1 text-text-secondary">
-            <time dateTime={post.date}>{formatDate(post.date)}</time> •{' '}
-            {post.readingTime}
-          </p>
-          <Text>{post.excerpt}</Text>
+          <h3 className="post-row__title">{post.title}</h3>
+          <p className="post-row__excerpt">{post.excerpt}</p>
         </article>
       </a>
     </Link>

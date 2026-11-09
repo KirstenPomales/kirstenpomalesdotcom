@@ -7,46 +7,75 @@ interface TextProps {
 }
 
 export const H1 = ({ children, className }: TextProps) => (
-  <h1
-    className={classNames(
-      'text-text-primary text-4xl md:text-5xl font-extrabold tracking-tight',
-      className,
-    )}
-  >
-    {children}
-  </h1>
+  <h1 className={classNames('page-title', className)}>{children}</h1>
 )
 
 export const H3 = ({ children, className }: TextProps) => (
-  <h3
-    className={classNames(
-      'text-text-primary/50 text-xl md:text-2xl  tracking-tight',
-      className,
-    )}
-  >
-    {children}
-  </h3>
+  <h3 className={classNames('card__title', className)}>{children}</h3>
 )
 
 export const H4 = ({ children, className }: TextProps) => (
-  <h4
-    className={classNames(
-      'text-text-primary text-2xl md:text-2xl font-extrabold tracking-tight leading-tight',
-      className,
-    )}
-  >
-    {children}
-  </h4>
+  <h4 className={classNames('card__title', className)}>{children}</h4>
 )
 
 export const Text = ({ children, className }: TextProps) => (
-  <p className={classNames('text-text-secondary md:text-lg ml-0.5', className)}>
-    {children}
-  </p>
+  <p className={className}>{children}</p>
 )
 
 export const TextSmall = ({ children, className }: TextProps) => (
-  <p className={classNames('text-text-secondary leading-snug', className)}>
+  <p className={classNames('card__desc', className)}>{children}</p>
+)
+
+/** Inline external link rendered as a chunky highlighter chip. */
+export const ExtLink = ({ href, children }: { href: string; children: ReactNode }) => (
+  <a href={href} target="_blank" className="ilink" rel="noreferrer">
     {children}
-  </p>
+  </a>
+)
+
+interface SectionHeadProps {
+  num?: string
+  title: ReactNode
+  intro?: ReactNode
+  id?: string
+  as?: 'h1' | 'h2'
+}
+
+/** Section header: ink index chip, huge heading, optional intro. */
+export const SectionHead = ({ num, title, intro, id, as = 'h2' }: SectionHeadProps) => {
+  const Heading = as
+  return (
+    <div className="section__head">
+      {num && (
+        <span className="index-no" aria-hidden="true">
+          {num}
+        </span>
+      )}
+      <Heading id={id}>{title}</Heading>
+      {intro && <p>{intro}</p>}
+    </div>
+  )
+}
+
+interface SectionProps {
+  num?: string
+  children: ReactNode
+  className?: string
+  labelledBy?: string
+  dots?: boolean
+}
+
+/** Page section with optional ghost numeral and dotted-grid backdrop. */
+export const Section = ({ num, children, className, labelledBy, dots = true }: SectionProps) => (
+  <section
+    aria-labelledby={labelledBy}
+    className={classNames('section', dots && 'section--dots', className)}
+  >
+    {num && (
+      <span className="ghost-num" aria-hidden="true">
+        {num}
+      </span>
+    )}
+    {children}
+  </section>
 )

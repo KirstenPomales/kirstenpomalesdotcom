@@ -11,19 +11,15 @@ const ThemeToggler = () => {
   // After mounting, we have access to the theme
   useEffect(() => setMounted(true), [])
 
-  if (!mounted) return null
+  if (!mounted) return <span className="btn--icon inline-block" aria-hidden="true" />
 
   return (
     <button
-      className="text-text-primary p-0.5 rounded-sm focus:outline-none focus:ring focus:border-primary"
+      type="button"
+      className="btn btn--butter btn--icon"
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
     >
-      {mounted &&
-        (theme === 'dark' ? (
-          <SunIcon className="w-6 h-6" />
-        ) : (
-          <MoonIcon className="w-6 h-6" />
-        ))}
+      {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
     </button>
   )
 }
