@@ -11,7 +11,8 @@ const ThemeToggler = () => {
   // After mounting, we have access to the theme
   useEffect(() => setMounted(true), [])
 
-  if (!mounted) return <span className="btn--icon inline-block" aria-hidden="true" />
+  if (!mounted)
+    return <span className="btn--icon inline-block" aria-hidden="true" />
 
   return (
     <button

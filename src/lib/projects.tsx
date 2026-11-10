@@ -1,9 +1,11 @@
+import BoxIcon from '@/icons/box.svg'
 import ChatIcon from '@/icons/chat.svg'
+import MicIcon from '@/icons/mic.svg'
 
 export interface Project {
   title: string
   description: string
-  year: string
+  year?: string
   tags: string[]
   url: string
   githubUrl?: string
@@ -14,6 +16,14 @@ export interface Project {
   hackathon?: boolean
   governance?: boolean
   openSource?: boolean
+  /** Investors / backers, shown as a small muted line on the card. */
+  backedBy?: string
+  /** Grant funders, shown as a second small muted line on the card. */
+  grantsBy?: string
+  /** Featured under "hackathon projects" on the homepage. */
+  favoriteHack?: boolean
+  /** Event the project was built at, shown as a chip on the card. */
+  event?: string
 }
 
 export const projects: Project[] = [
@@ -31,13 +41,36 @@ export const projects: Project[] = [
     title: 'Lortnoc Tahc',
     description:
       'encrypted messaging on unencrypted platforms. a browser extension that hides real messages inside ordinary Telegram chats using steganography.',
-    year: '🟢 July 2026',
     tags: [],
+    event: 'ETHGlobal Lisbon 2026',
     url: 'https://www.lortnoctahc.com/',
     logo: ChatIcon,
     hackathon: true,
     showOnHomepageHack: false,
     openSource: true,
+    favoriteHack: true,
+  },
+  {
+    title: 'The Box',
+    description:
+      'a peer to peer mail delivery service based on the Polish Paczkomat system. hardware hack where we set the venue on fire.',
+    tags: [],
+    event: 'ETHGlobal Brussels 2024',
+    url: 'https://x.com/kirstenrpomales/status/1812194533150794186',
+    logo: BoxIcon,
+    hackathon: true,
+    favoriteHack: true,
+  },
+  {
+    title: 'DeadAss',
+    description:
+      "an audio-based life-alert system that protects your crypto if it senses you're in danger based on ambient noise.",
+    tags: [],
+    event: 'ETHGlobal Bangkok 2024',
+    url: 'https://x.com/kirstenrpomales/status/1869379206230032705',
+    logo: MicIcon,
+    hackathon: true,
+    favoriteHack: true,
   },
   {
     title: 'ReplyGuy.ai, Co-founder',
@@ -47,7 +80,6 @@ export const projects: Project[] = [
     tags: [],
     url: 'https://www.replyguy.ai/',
     logo: '/reply-guy-logo.png',
-   
   },
   {
     title: 'TalentLayer House',
@@ -58,7 +90,6 @@ export const projects: Project[] = [
     url: 'https://www.talentlayer.org/',
     logo: '/talentlayer-raccoon-head.png',
     current: true,
-  
   },
   {
     title: 'Revyou, CEO',
@@ -68,12 +99,13 @@ export const projects: Project[] = [
     tags: [],
     url: 'https://www.revyou.me/',
     logo: '/Revyou1.png',
-
   },
   {
     title: 'TalentLayer Protocol, CEO',
     description:
-      'an open-source blockchain infrastructure decentralized marketplaces with interoperable reputation. backed by outlier ventures, founders of The Graph, Kleros, +',
+      'a blockchain-based decentralized marketplace infrastructure with 10k users',
+    backedBy: 'Outlier Ventures, The Graph founders, Kleros, other angels',
+    grantsBy: 'European Commission',
     year: '🟡 July 2022 - Sept 2024',
     tags: [],
     url: 'https://docs.talentlayer.org/',
@@ -103,9 +135,10 @@ export const projects: Project[] = [
   {
     title: 'Facings, COO',
     description:
-      'a white-label NFT marketplace solution for influencers, sports collectables, clothing companies, and more. grew it from 5 to 12 people, generated revenue, raised pre-seed round.',
+      'a white-label NFT marketplace working with US sports personalities, gaming companies, and music labels.',
     tags: [],
     year: '🟢 June 2021 - July 2022',
+    backedBy: 'EOS Detroit, other angels',
     url: 'https://facings.io/',
     logo: '/facings.png',
     showOnHomepage: true,

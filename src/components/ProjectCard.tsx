@@ -13,7 +13,16 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({ project, row = false }: ProjectCardProps) => {
-  const { title, description, url, githubUrl, year } = project
+  const {
+    title,
+    description,
+    url,
+    githubUrl,
+    year,
+    backedBy,
+    grantsBy,
+    event,
+  } = project
   const { logo } = project
 
   const Logo =
@@ -53,7 +62,20 @@ const ProjectCard = ({ project, row = false }: ProjectCardProps) => {
         <div className="card__body">
           <H3>{title}</H3>
           <TextSmall>{description}</TextSmall>
-          <p className="font-bold">{year}</p>
+          {backedBy && (
+            <p className="card__backed">
+              <span className="card__backed-label">pre-seed backed by</span>{' '}
+              {backedBy}
+            </p>
+          )}
+          {grantsBy && (
+            <p className="card__backed">
+              <span className="card__backed-label">grants backed by</span>{' '}
+              {grantsBy}
+            </p>
+          )}
+
+          {year && <p className="font-bold">{year}</p>}
           {actions}
         </div>
       </article>
@@ -70,7 +92,26 @@ const ProjectCard = ({ project, row = false }: ProjectCardProps) => {
       </header>
       <H3>{title}</H3>
       <TextSmall>{description}</TextSmall>
-      <p className="card__meta">{year}</p>
+      {backedBy && (
+        <p className="card__backed">
+          <span className="card__backed-label">pre-seed backed by</span>{' '}
+          {backedBy}
+        </p>
+      )}
+      {grantsBy && (
+        <p className="card__backed">
+          <span className="card__backed-label">grants backed by</span>{' '}
+          {grantsBy}
+        </p>
+      )}
+
+      {event && (
+        <p className="card__event">
+          <span className="chip">{event}</span>
+        </p>
+      )}
+
+      {year && <p className="card__meta">{year}</p>}
     </article>
   )
 }

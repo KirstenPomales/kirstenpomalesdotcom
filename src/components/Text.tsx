@@ -27,7 +27,13 @@ export const TextSmall = ({ children, className }: TextProps) => (
 )
 
 /** Inline external link rendered as a chunky highlighter chip. */
-export const ExtLink = ({ href, children }: { href: string; children: ReactNode }) => (
+export const ExtLink = ({
+  href,
+  children,
+}: {
+  href: string
+  children: ReactNode
+}) => (
   <a href={href} target="_blank" className="ilink" rel="noreferrer">
     {children}
   </a>
@@ -42,7 +48,13 @@ interface SectionHeadProps {
 }
 
 /** Section header: ink index chip, huge heading, optional intro. */
-export const SectionHead = ({ num, title, intro, id, as = 'h2' }: SectionHeadProps) => {
+export const SectionHead = ({
+  num,
+  title,
+  intro,
+  id,
+  as = 'h2',
+}: SectionHeadProps) => {
   const Heading = as
   return (
     <div className="section__head">
@@ -66,7 +78,13 @@ interface SectionProps {
 }
 
 /** Page section with optional ghost numeral and dotted-grid backdrop. */
-export const Section = ({ num, children, className, labelledBy, dots = true }: SectionProps) => (
+export const Section = ({
+  num,
+  children,
+  className,
+  labelledBy,
+  dots = true,
+}: SectionProps) => (
   <section
     aria-labelledby={labelledBy}
     className={classNames('section', dots && 'section--dots', className)}

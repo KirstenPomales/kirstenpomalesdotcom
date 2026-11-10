@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { Post } from 'contentlayer/generated'
 
@@ -10,13 +11,11 @@ import { projects } from '@/lib/projects'
 const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
   const filteredProjects = projects.filter((project) => project.showOnHomepage)
 
-  const current = projects.filter((project) => project.current)
-
-  const openSourceProjects = projects.filter((project) => project.openSource)
+  const favoriteHacks = projects.filter((project) => project.favoriteHack)
 
   return (
     <>
-      {/* Hero + growth mode (signature moment) */}
+      {/* Hero */}
       <section className="hero" aria-labelledby="hero-title">
         <h1 className="display" id="hero-title">
           <span className="inline-block w-full">hey, i&apos;m</span>{' '}
@@ -40,23 +39,17 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
               Capital, EthersJS, and others.
             </Text>
             <Text>
+              Allegedly, I run a{' '}
+              <ExtLink href="https://x.com/talentlayer">
+                cult of racoons
+              </ExtLink>
+              .
+            </Text>
+            <Text>
               Based in Prague. Most likely to be found at a shisha lounge or on
               the crypto hackathon circuit.
             </Text>
           </div>
-
-          <section className="growth" aria-labelledby="growth-title">
-            <h2 id="growth-title">growth mode</h2>
-            <Text>
-              I&apos;m building a few projects at the moment. Check them out
-              here!
-            </Text>
-            <div className="growth__grid">
-              {current.map((project) => (
-                <ProjectCard key={project.title} project={project} row />
-              ))}
-            </div>
-          </section>
         </div>
       </section>
 
@@ -83,9 +76,17 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
               lot.
             </Text>
           </div>
-          <div className="panel panel--butter">
-            <Text>Dropout and self-taught dev.</Text>
-          </div>
+        </div>
+        {/* prior startups */}
+        <div className="cards mt-16">
+          {filteredProjects.map((project) => (
+            <ProjectCard key={project.title} project={project} />
+          ))}
+        </div>
+        <div className="cta-row">
+          <Link href="/projects">
+            <a className="btn btn--tomato">see more</a>
+          </Link>
         </div>
       </Section>
 
@@ -130,6 +131,25 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
             </Text>
           </div>
         </div>
+        <figure className="polaroid">
+          <Link href="/blog/eth-prague-good-profit-good-token">
+            <a className="polaroid__link">
+              <Image
+                src="/static/images/tokenomics-talk-2026.jpg"
+                width={1800}
+                height={997}
+                alt="Kirsten Pomales on stage at ETHPrague 2026 next to her slide: Part 1, A Brief History of Tokens. Every major trend in token economics has been a reaction to SEC pressure, not what projects actually need."
+              />
+              <figcaption>
+                <span className="polaroid__title">
+                  Good Profit, Good Token: Building the Next Era of Crypto
+                  Businesses
+                </span>
+                <span className="polaroid__meta">ETHPrague 2026</span>
+              </figcaption>
+            </a>
+          </Link>
+        </figure>
       </Section>
 
       {/* /lobbying & government relations */}
@@ -161,14 +181,8 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
               </Text>
               <Text>
                 After moving to Europe in 2022, I&apos;ve secured my teams
-                Certificate of Excellence in Innovation and major European
-                Union grant funding.
-              </Text>
-              <Text>
-                <strong>
-                  Currently working on some new innovation initiatives in the
-                  US and EU. More on that soon.
-                </strong>
+                Certificate of Excellence in Innovation and major European Union
+                grant funding.
               </Text>
             </div>
           </div>
@@ -181,12 +195,15 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
         <div className="grid12 personal">
           <div className="panel panel--sm panel--mint lift">
             <Text className="personal__long">
-              My most fundamental belief is that humans are autonomous; that
-              is, they are able to take action to impact their environment and
+              My most fundamental belief is that humans are autonomous; that is,
+              they are able to take action to impact their environment and
               circumstances. Anything can be done by anyone with enough
-              willpower and grit. We make our own reality. When we realize
-              this, we are free.
+              willpower and grit. We make our own reality. When we realize this,
+              we are free.
             </Text>
+          </div>
+          <div className="panel panel--sm panel--lemon lift">
+            <Text>Dropout and self-taught dev.</Text>
           </div>
           <div className="panel panel--sm panel--butter lift">
             <Text>
@@ -207,70 +224,44 @@ const HomePage = ({ latestPosts }: { latestPosts: Post[] }) => {
         </div>
       </Section>
 
-      {/* prior startups */}
-      <Section num="05" labelledBy="prior-title">
-        <SectionHead
-          num="05"
-          id="prior-title"
-          title="prior startups"
-          intro="I've built multiple VC-backed, revenue generating startups like marketplaces, data infra, and more."
-        />
-        <div className="cards">
-          {filteredProjects.map((project) => (
-            <ProjectCard key={project.title} project={project} />
-          ))}
-        </div>
-        <div className="cta-row">
-          <Link href="/projects">
-            <a className="btn btn--tomato">see more</a>
-          </Link>
-        </div>
-      </Section>
-
-      {/* open-source */}
-      <Section num="06" labelledBy="oss-title">
-        <SectionHead
-          num="06"
-          id="oss-title"
-          title="open-source"
-          intro="I've been contributing OS code and research occasionally. Active projects here."
-        />
-        <div className="cards">
-          {openSourceProjects.map((project) => (
-            <ProjectCard key={project.title} project={project} />
-          ))}
-        </div>
-      </Section>
-
       {/* hackathon projects */}
-      <Section num="07" labelledBy="hack-title" dots={false}>
+      <Section num="05" labelledBy="hack-title" dots={false}>
         <div className="panel panel--lemon hack">
           <span className="index-no" aria-hidden="true">
-            07
+            05
           </span>
-          <h2 id="hack-title">
-            hackathon projects
-          </h2>
+          <h2 id="hack-title">hackathon projects</h2>
           <Text>
-            I&apos;ve been to 15+ hackathons in the past two years. Most of the
-            time, I&apos;m there building work tech proofs of concepts.
-            I&apos;ve won prizes at the past 6 that I&apos;ve hacked at.
+            I&apos;ve averaged 10+ hackathons per year since 2023, winning
+            prizes at most of them. I like building crazy experiments with
+            frontier tech. Check out some of my favorites below.
           </Text>
-          <a
-            className="btn btn--tomato"
-            href="https://linktr.ee/kphacks"
-            target="_blank"
-            rel="noreferrer"
-          >
-            view some hacks
-          </a>
         </div>
+        <div className="cards mt-12">
+          {favoriteHacks.map((project) => (
+            <ProjectCard key={project.title} project={project} />
+          ))}
+        </div>
+        <a
+          className="tweet-shot"
+          href="https://x.com/kirstenrpomales/status/2082465368803627082"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            src="/static/images/ethglobal-lisbon-post.jpg"
+            width={1778}
+            height={1660}
+            alt="Kirsten's X post about building Lortnoc Tahc at ETHGlobal Lisbon: 6 days ago the EU passed the Chat Control Act, enabling tech cos and governments to scan your messages. The video shows the team presenting on the ETHGlobal Lisbon finalist stage. 103 likes."
+          />
+          <span className="sticker tweet-shot__badge">ETHGlobal Finalist</span>
+        </a>
       </Section>
 
       {/* latest writing */}
-      <Section num="08" labelledBy="writing-title">
+      <Section num="06" labelledBy="writing-title">
         <SectionHead
-          num="08"
+          num="06"
           id="writing-title"
           title="latest writing"
           intro="I write occasionally about tech, startups, and the future of work."
